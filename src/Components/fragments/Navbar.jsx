@@ -17,7 +17,7 @@ const Navbar = () =>{
      
                 </Button>
                 </div>
-                <div className="items-center justify-between md:flex">
+                <div className="items-center justify-between">
                 <ul className="flex font-medium p-4 md:p-0 mt-4 border rounded-lg bg-transparent-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                     <li>
                         <Link to="/" 

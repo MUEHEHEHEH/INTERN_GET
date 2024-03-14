@@ -2,34 +2,36 @@ import React from "react";
 import { Link } from "react-router-dom";
 const Footer = () =>{
     return(
-        <div className="bg-white w-full h-[410px] pt-20">
-            <footer className="bg-white dark:bg-gray-900">
+            <footer className="bg-amber-400 w-full h-[410px] pt-20 border-gray-600 border-y-2 shadow">
                 <div className="mx-auto w-full max-w-screen-xl p-6">    
                     <ul className="flex items-center justify-center pb-5 text-md font-medium text-gray-500 dark:text-gray-400 ">
                         <li>
-                            <Link to="/Home" className="hover:underline px-10 gap-2.5">Home</Link>
+                            <Link to="/Home" className="hover:underline px-10 text-black">Home</Link>
                         </li>
                         <li>
-                            <Link to="/" className="hover:underline px-10 gap-2.5">Book now</Link>
+                            <Link to="/" className="hover:underline px-20 text-black">Book now</Link>
                         </li>
                         <li>
-                            <img src="Logo.png" className="flex items-center justify-center w-[12rem] h-14 mx-20" alt="Logo" />
+                            <img src="Logo.png" className="flex items-center justify-center w-[15rem] h-14 ml-20" alt="Logo" />
                         </li>
                         <li>
-                            <Link to="/JoinUs" className="hover:underline px-10 gap-2.5">Join Us</Link>
+                            <Link to="/JoinUs" className="hover:underline px-20 text-black">Join Us</Link>
                         </li>
                         <li>
-                            <Link to="/ContactUs" className="hover:underline px-10 gap-2.5">Contact Us</Link>
+                            <Link to="/ContactUs" className="hover:underline px-10  text-black">Contact Us</Link>
                         </li>
                     </ul>     
-                    <hr className="my-6 border-gray-400 sm:mx-auto dark:border-gray-700 " />
-                    <div className="flex items-start justify-center">
-                        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400 ">© 2023 — 2024  Privacy — Terms.</span>
+                    <hr className="my-6 border-black " />
+                    <p className="text-center text-md pl-20 ml-20 w-[989px] h-[30px] flex justify-center align-center pb-0 tracking-wide ">Under section 107 of the copyright Act 1976, 
+                        allowance is mad for FAIR USE for purpose such a as criticism, comment, news reporting, teaching, scholarship and research.
+                        Fair use is a use permitted by copyright statues that might otherwise be infringing. Non- Profit, educational or personal use tips the balance in favor of FAIR USE.
+                    </p>
+                    <div className="flex items-start justify-center mt-20">
+                        <span className="text-sm text-black sm:text-center dark:text-gray-400 ">© 2023 — 2024  Privacy — Terms.</span>
                     </div>
                     </div>
             </footer>
 
-        </div>
     );
 };
 
