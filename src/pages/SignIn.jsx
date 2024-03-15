@@ -2,16 +2,19 @@ import React from "react";
 import Navbar from "../Components/fragments/Navbar";
 import BackGround from "../Components/layouts/BG";
 import FormSignIn from "../Components/fragments/FormSignIn";
+import { Fade } from "react-reveal";
 
 
 const SignIn = () => {
     return(
-        <BackGround>
-            <>
-            <Navbar />
-            <FormSignIn />
-            </>
-         </BackGround>
+        <Fade>
+            <BackGround>
+                <>
+                <Navbar />
+                <FormSignIn />
+                </>
+            </BackGround>
+        </Fade>
     );
 };
 

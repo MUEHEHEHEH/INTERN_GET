@@ -5,19 +5,23 @@ import HomeContent4 from "../Components/elements/Content/HomeContent4";
 import HomeContent3 from "../Components/elements/Content/HomeContent3";
 import HomeContent2 from "../Components/elements/Content/HomeContent2";
 import HomeContent1 from "../Components/elements/Content/HomeContent1";
+import { Fade } from "react-reveal";
 
 const Home = () => {
     return(
-        <BackGround>
-            <>
-                <Navbar/>
-                <HomeContent1/>
-                <HomeContent2/>
-                <HomeContent3/>
-                <HomeContent4/>    
-                <Footer/>
-            </>
-        </BackGround>
+        <Fade>
+            <BackGround>
+                <>
+                    <Navbar/>
+                    <HomeContent1/>
+                    <HomeContent2/>
+                    <HomeContent3/>
+                    <HomeContent4/>    
+                    <Footer/>
+                </>
+            </BackGround>
+
+        </Fade>
         
     );
 };
