@@ -11,7 +11,7 @@ const Footer = () =>{
                                 <Link to="/Home" className="hover:underline px-10 text-black">Home</Link>
                             </li>
                             <li>
-                                <Link to="/" className="hover:underline px-20 text-black">Book now</Link>
+                                <Link to="/BookNow" className="hover:underline px-20 text-black">Book now</Link>
                             </li>
                             <li>
                                 <img src="Logo.png" className="flex items-center justify-center w-[15rem] h-14 ml-20" alt="Logo" />

@@ -3,21 +3,22 @@ import { Link } from "react-router-dom";
 import Inputform from "../elements/input/Form";
 import Button from "../elements/button/button";
 import { Fade } from "react-awesome-reveal";
-const FormSignUp = () => {
+
+const VendorFormSignUp = () => {
     const signUp= (e) => {
         e.preventDefault(); 
-        window.location.href = "/SignIn";
+        window.location.href = "/VendorSignIn";
     };
     return(
         <div className="flex flex-col w-[408px] h-auto">
                 <Fade direction ="right" duration = {1000}>
                     <>
-                    <h1 className="flex items-start justify-center text-center text-5xl text-black font-[#1C1917] py-10">Sign-Up</h1>
+                    <h1 className="flex items-start justify-center text-center text-5xl text-black font-[#1C1917] py-10 font-bold">Vendor Sign-Up</h1>
                     <form className="max-w-sm mt-20 flex flex-col justify-start mr-10" onSubmit={signUp}>
                         <Inputform 
-                            label = "Full Name" 
+                            label = "Company Name" 
                             type = "text" 
-                            name = "FullName">
+                            name = "CompanyName">
                         </Inputform>
                         <Inputform 
                             label = "E-mail" 
@@ -35,9 +36,9 @@ const FormSignUp = () => {
                             name = "Phone Number">
                         </Inputform>
                         <Inputform 
-                            label = "House Address" 
+                            label = "Company Address" 
                             type = "text" 
-                            name = "House Address">
+                            name = "Company Address">
                         </Inputform>
                         <Inputform 
                             label = "KTP Scan" 
@@ -46,9 +47,10 @@ const FormSignUp = () => {
                             name = "KTP Scan">
                         </Inputform>
                         <Inputform 
-                            label = "Date of Birth" 
-                            type = "date" 
-                            name = "Date of Birth">
+                            label = "P.T Certification" 
+                            type = "file" 
+                            placeholder = "Upload Image"
+                            name = "P.T Certification">
                         </Inputform>
                         <Inputform 
                             label = "Password" 
@@ -70,7 +72,7 @@ const FormSignUp = () => {
                             </Button>
                             <h5 className="text-sm mt-1 text-gray-500">
                                 Have an account? &nbsp;
-                                <Button className="font-sm text-red-600" > <Link to = "/SignIn">  Sign-In </Link></Button>
+                                <Button className="font-sm text-red-600" > <Link to = "/VendorSignIn">  Sign-In </Link></Button>
                             </h5>
                         </div>
                     </form>
@@ -80,4 +82,4 @@ const FormSignUp = () => {
     );
 };
 
-export default FormSignUp;
+export default VendorFormSignUp;

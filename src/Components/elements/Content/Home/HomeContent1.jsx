@@ -1,6 +1,7 @@
 import React from "react";
-import Button from "../button/button";
+import Button from "../../button/button";
 import { Fade, Slide } from "react-awesome-reveal";
+import { Link } from "react-router-dom";
 
 
 const HomeContent1 = () =>{
@@ -24,16 +25,19 @@ const HomeContent1 = () =>{
                                 <Button type="button" 
                                     className=" text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 
                                     focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-10 py-2.5 text-center me-2 mb-2 dark:border-gray-600 ">
-                                        Book now
+                                        <Link to = "/BookNow">Book now</Link>
+                                        {/* Book now */}
+                                        
                                 </Button>
                                 <Button className="mb-2 me-2 flex flex-col justify-center w-[13.1875rem] text-center font-[Roboto] text-lg leading-[normal] text-gray-900 ">
-                                    Browse all vehicles
+                                    <Link to= "/BookNow">Browse all vechicles</Link>
+                                    {/* Browse all vehicles */}
                                 </Button>
                             </div>
                         </Fade>
                     </Fade>
                 </div>
-                <Slide direction="right" duration={2000}>
+                <Slide direction="" duration={2000}>
                     <div className=" w-[670px] h-[480px] rounded border border-black bg-white relative overflow-hidden">
                         <img
                             className="object-cover w-full h-full"

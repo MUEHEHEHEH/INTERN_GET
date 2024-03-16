@@ -1,8 +1,8 @@
 import React from "react";
 import BackGround from "../Components/layouts/BG";
 import Navbar from "../Components/fragments/Navbar";
-import JoinUsContent1 from "../Components/elements/Content/JoinUsContent1";
-import JoinUsContent2 from "../Components/elements/Content/JoinUsContent2";
+import JoinUsContent1 from "../Components/elements/Content/Join/JoinUsContent1";
+import JoinUsContent2 from "../Components/elements/Content/Join/JoinUsContent2";
 import Footer from "../Components/fragments/Footer";
 import { Fade } from "react-reveal";
 

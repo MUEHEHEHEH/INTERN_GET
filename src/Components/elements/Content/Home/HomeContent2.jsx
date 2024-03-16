@@ -1,7 +1,8 @@
 import React from "react";
-import Button from "../button/button";
+import Button from "../../button/button";
 import { Fade, Zoom } from "react-awesome-reveal";
 import { Slide } from "react-reveal";
+import { Link } from "react-router-dom";
 // import { Fade } from "react-reveal";
 
 
@@ -48,7 +49,8 @@ const HomeContent2 = () =>{
                             type="button"
                             className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 font-medium rounded-lg text-sm px-10 py-5 text-center me-2 "
                         >
-                            Browse all vehicles
+                            <Link to = "/BookNow">Browse all vehicle</Link>
+                            {/* Browse all vehicles */}
                         </Button>      
                     </Fade>
                 </div>

@@ -1,10 +1,12 @@
 import React from "react";
-import Button from "../button/button";
+import Button from "../../button/button";
 import { Fade, Slide} from "react-awesome-reveal";
+import { Link } from "react-router-dom";
 // import { Slide } from "react-reveal";
 
 
 const JoinUsContent1 = () =>{
+
     return(
         <div className="bg-gradient-to-b from-white to-ce2d2d flex justify-center items-center pt-10 pb-10 pl-10 pr-10 w-auto h-auto">
             <div className="flex items-center justify-center Jakarta Sans w-auto h-auto text-black font-[text-[3.5rem] leading-[normal]] gap-x-20">
@@ -24,7 +26,7 @@ const JoinUsContent1 = () =>{
                         <div className="flex w-auto h-auto gap-10">
                             <Button type="button" 
                                 className="flex justify-center text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-10 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">
-                                    Register now as a vendor
+                                   <Link to = "/VendorSignIn">Register now as a vendor </Link> 
                             </Button>
                         </div>
                     </Fade>

@@ -5,6 +5,11 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import JoinUs from "./pages/JoinUs";
 import ContactUs from "./pages/ContactUs";
+import VendorSignUp from "./pages/VendorSignUp";
+import VendorSignIn from "./pages/VendorSignIn";
+import VendorDashboard from "./pages/VendorDashboard";
+import AddFleat from "./pages/AddFleet";
+import BookNow from "./pages/BookNow";
 
 function App() {
 
@@ -33,7 +38,26 @@ function App() {
         path: "/ContactUs",
         element: <ContactUs/>
       },
-
+      {
+        path: "/VendorSignIn",
+        element: <VendorSignIn/>
+      },
+      {
+        path: "/VendorSignUp",
+        element: <VendorSignUp/>
+      },
+      {
+        path: "/VendorDashboard",
+        element: <VendorDashboard/>
+      },
+      {
+        path: "/AddFleat",
+        element: <AddFleat/>
+      },
+      {
+        path: "/BookNow",
+        element: <BookNow/>
+      }
   ]); 
 
 

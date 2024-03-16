@@ -4,12 +4,12 @@ import Inputform from "../elements/input/Form";
 import Button from "../elements/button/button";
 import { Fade } from "react-awesome-reveal";
 
-const FormSignIn = () =>{
+const VendorFormSignIn = () =>{
     const SignIn = (e) => {
         e.preventDefault();
         localStorage.setItem('email', e.target.email.value);
         localStorage.setItem('password', e.target.password.value);
-        window.location.href = "/Home";
+        window.location.href = "/VendorDashboard";
     };
 
     return(
@@ -20,7 +20,7 @@ const FormSignIn = () =>{
                 </Fade>
                 <Fade direction ="right" duration = {2000}>
                     <div className="flex flex-col w-[408px] h-[535px]">
-                            <h1 className="flex items-start justify-center text-center text-5xl text-black font-bold pb-10 pl-10">Sign-in Page.</h1>
+                            <h1 className="flex items-start justify-center text-center text-5xl text-black pb-10 pl-10"><span className="font-Playball italic ">Vendor {" "} </span><strong>Sign-in</strong></h1>
                             <form className="max-w-sm mx-20" onSubmit={SignIn}>
                                 <Inputform 
                                     label = "Username/Email" 
@@ -62,11 +62,7 @@ const FormSignIn = () =>{
                                 </button>
                                 <h5 className="text-sm flex items-center justify-start mt-1 text-gray-500">
                                     Didn't have an account? &nbsp;
-                                    <button className="font-sm text-red-600"> <Link to="/SignUp"> Sign Up here</Link> </button>
-                                </h5>
-                                <h5 className="text-sm flex items-center justify-start mt-1 text-gray-500">
-                                    Are you the vendor? &nbsp;
-                                    <button className="font-sm text-red-600"> Sign in here </button>
+                                    <button className="font-sm text-red-600"> <Link to="/VendorSignUp"> Sign Up here</Link> </button>
                                 </h5>
                             </form>
                          </div>
@@ -74,4 +70,4 @@ const FormSignIn = () =>{
         </div>
     );
 };
-export default FormSignIn;
+export default VendorFormSignIn;
