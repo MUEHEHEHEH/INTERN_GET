@@ -2,26 +2,27 @@ import React from "react";
 import { Fade } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 const Footer = () =>{
+
+    const menuItems = [
+        { to: '/Home', label: 'Home', className: 'hover:underline px-10 text-black' },
+        { to: '/BookNow', label: 'Book now', className: 'hover:underline px-20 text-black' },
+        { to: '/JoinUs', label: 'Join Us', className: 'hover:underline px-20 text-black' },
+        { to: '/ContactUs', label: 'Contact Us', className: 'hover:underline px-10 text-black' }
+      ];
     return(
             <footer className="bg-amber-400 w-full h-[410px] pt-20 border-gray-600 border-y-2 shadow">
                     <div className="mx-auto w-full max-w-screen-xl p-6">    
                         <ul className="flex items-center justify-center pb-5 text-md font-medium text-gray-500 dark:text-gray-400 ">
                             <Fade direction="left" triggerOnce={true} duration={2000}>
-                            <li>
-                                <Link to="/Home" className="hover:underline px-10 text-black">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/BookNow" className="hover:underline px-20 text-black">Book now</Link>
-                            </li>
-                            <li>
-                                <img src="Logo.png" className="flex items-center justify-center w-[15rem] h-14 ml-20" alt="Logo" />
-                            </li>
-                            <li>
-                                <Link to="/JoinUs" className="hover:underline px-20 text-black">Join Us</Link>
-                            </li>
-                            <li>
-                                <Link to="/ContactUs" className="hover:underline px-10  text-black">Contact Us</Link>
-                            </li>
+                                {menuItems.map((menuItem, index) => (
+                                    <li key={index} className="ml-5">
+                                    {menuItem.to === '/Home' || menuItem.to === '/BookNow' || menuItem.to === '/JoinUs' || menuItem.to === '/ContactUs' ? (
+                                        <Link to={menuItem.to} className={menuItem.className}>{menuItem.label}</Link>
+                                    ) : (
+                                        <img src="Logo.png" className="w-[15rem] h-14" alt="Logo" />
+                                    )}
+                                    </li>
+                                ))}
                             </Fade>
                         </ul>     
                         <hr className="my-6 border-black " />

@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../Components/fragments/Navbar";
 import BackGround from "../Components/layouts/BG";
 import VendorFormSignIn from "../Components/fragments/VendorFormSignIn";
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 
 
 const SignIn = () => {

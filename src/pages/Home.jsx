@@ -5,7 +5,7 @@ import HomeContent4 from "../Components/elements/Content/Home/HomeContent4";
 import HomeContent3 from "../Components/elements/Content/Home/HomeContent3";
 import HomeContent2 from "../Components/elements/Content/Home/HomeContent2";
 import HomeContent1 from "../Components/elements/Content/Home/HomeContent1";
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 
 const Home = () => {
     return(

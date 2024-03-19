@@ -28,7 +28,7 @@ const AddFleat = () =>{
                                 <h1 className="flex items-start justify-center text-center text-5xl text-black font-[#1C1917] py-10">  Add Fleet</h1>    
 
                             </div>
-                            <form className="max-w-sm mt-20 flex flex-col justify-start mr-10" onSubmit={Add}>
+                            <form className="max-w-sm mt-20 flex flex-col justify-start mr-10" onSubmit={Add} >
                                 <Inputform 
                                     label = "Car Name" 
                                     type = "text" 
@@ -69,7 +69,6 @@ const AddFleat = () =>{
                                     <Button 
                                         type="submit" 
                                         className=" text-white bg-red-700 font-bold rounded-md text-md py-2.5 text-center w-[200px]"
-                                    
                                     >
                                         Proceed
                                     </Button>

@@ -4,6 +4,12 @@ import Button from "../elements/button/button";
 import { Fade } from "react-awesome-reveal";
 
 const Navbar = () =>{
+    const menuItems = [
+        { path: '/Home', label: 'Home' },
+        { path: '/BookNow', label: 'Book Now' },
+        { path: '/JoinUs', label: 'Join Us' },
+        { path: '/ContactUs', label: 'Contact Us' }
+      ];
     return(
         <nav className="top-10 left-10 w-1080 h-48 bg-transparent border-gray-200 dark:bg-gray-900">
                 {/* <Fade direction="left" triggerOnce={true} duration={2000}> */}
@@ -26,38 +32,15 @@ const Navbar = () =>{
                         <div className="items-center justify-between">
                             <Fade cascade damping={0.2}>
                                 <ul className="flex font-medium p-4 md:p-0 mt-4 border rounded-lg bg-transparent-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                                    <li>
-                                        <Fade direction="down" triggerOnce={true} duration={1000}>
-                                            <Link to="/Home" 
-                                                className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                                                    Home
-                                            </Link>
-                                        </Fade>
+                                {menuItems.map((menuItem, index) => (
+                                    <li key={index}>
+                                    <Fade direction="down" triggerOnce={true} duration={1000}>
+                                        <Link to={menuItem.path} className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                                        {menuItem.label}
+                                        </Link>
+                                    </Fade>
                                     </li>
-                                    <li>
-                                        <Fade direction="down" triggerOnce={true} duration={1000}>
-                                            <Link to="/BookNow" 
-                                                className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                                                    Book Now
-                                            </Link>
-                                        </Fade>
-                                    </li>
-                                    <li>
-                                        <Fade direction="down" triggerOnce={true} duration={1000}>
-                                            <Link to="/JoinUs" 
-                                                className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 d:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                                                    Join Us
-                                            </Link>
-                                        </Fade>
-                                    </li>
-                                    <li>
-                                        <Fade direction="down" triggerOnce={true} duration={1000}>
-                                            <Link to="/ContactUs" 
-                                                className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                                                    Contact Us
-                                            </Link>
-                                        </Fade>
-                                    </li>
+                                ))}
                                 </ul>
                             </Fade>
                         </div>

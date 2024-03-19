@@ -4,7 +4,7 @@ import Navbar from "../Components/fragments/Navbar";
 import JoinUsContent1 from "../Components/elements/Content/Join/JoinUsContent1";
 import JoinUsContent2 from "../Components/elements/Content/Join/JoinUsContent2";
 import Footer from "../Components/fragments/Footer";
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 
 const JoinUs = () => {
     return(

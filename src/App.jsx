@@ -10,6 +10,9 @@ import VendorSignIn from "./pages/VendorSignIn";
 import VendorDashboard from "./pages/VendorDashboard";
 import AddFleat from "./pages/AddFleet";
 import BookNow from "./pages/BookNow";
+import FleetDetails from "./pages/FleetDetails";
+import Preferences from "./pages/Preferences";
+import CheckOut from "./pages/CheckOut";
 
 function App() {
 
@@ -57,6 +60,18 @@ function App() {
       {
         path: "/BookNow",
         element: <BookNow/>
+      },
+      {
+        path:"/FleetDetails",
+        element: <FleetDetails/>
+      },
+      {
+        path:"/Preferences",
+        element: <Preferences/>
+      },
+      {
+        path:"/CheckOut",
+        element: <CheckOut/>
       }
   ]); 
 

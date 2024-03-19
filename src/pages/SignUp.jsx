@@ -2,7 +2,7 @@ import React from "react";
 import BackGround from "../Components/layouts/BG";
 import Navbar from "../Components/fragments/Navbar";
 import FormSignUp from "../Components/fragments/FormSignUp";
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 
 const SignUp = () =>{
     return(

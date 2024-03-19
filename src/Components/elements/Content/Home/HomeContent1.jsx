@@ -30,7 +30,7 @@ const HomeContent1 = () =>{
                                         
                                 </Button>
                                 <Button className="mb-2 me-2 flex flex-col justify-center w-[13.1875rem] text-center font-[Roboto] text-lg leading-[normal] text-gray-900 ">
-                                    <Link to= "/BookNow">Browse all vechicles</Link>
+                                    <Link to = "/FleetDetails">Browse all vechicles</Link>
                                     {/* Browse all vehicles */}
                                 </Button>
                             </div>

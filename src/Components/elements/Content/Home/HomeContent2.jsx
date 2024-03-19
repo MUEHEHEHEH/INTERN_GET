@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../../button/button";
-import { Fade, Zoom } from "react-awesome-reveal";
-import { Slide } from "react-reveal";
+import { Fade, Zoom, Slide } from "react-awesome-reveal";
+// import { Slide } from "react-reveal";
 import { Link } from "react-router-dom";
 // import { Fade } from "react-reveal";
 

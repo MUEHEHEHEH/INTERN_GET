@@ -1,7 +1,7 @@
 import React from "react";
 
 const Input = (props) => {
-    const {type, placeholder, name, width="w-[408px]"} = props;
+    const {type, placeholder, name, width="w-[408px]",onChange} = props;
     return(
         <input  
             type={type}
@@ -9,6 +9,7 @@ const Input = (props) => {
             placeholder={placeholder}
             name = {name}
             id = {name}
+            onChange={onChange}
         />
     );
 };
