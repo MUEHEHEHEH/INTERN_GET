@@ -1,7 +1,7 @@
 import React from "react";
 
 const Label = (props) => {
-    const { htmlFor, children ,text = "text-sm font-medium text-gray-900" } = props;
+    const { htmlFor, children ,text  } = props;
     return (
         <label 
             htmlFor={htmlFor}

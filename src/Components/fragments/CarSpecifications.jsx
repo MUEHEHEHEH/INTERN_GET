@@ -1,5 +1,5 @@
 import React from "react";
-// import { dummyData } from "../../util/fleetDetailsData";
+import { dummyData } from "../../util/fleetDetailsData";
 const CarSpecifications = ({car}) => {
     return(
         <>
@@ -20,8 +20,8 @@ const CarSpecifications = ({car}) => {
                     }
                 </div>
         </>
-
     );
+
 }
 
 export default CarSpecifications

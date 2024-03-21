@@ -17,49 +17,58 @@ const VendorFormSignUp = () => {
                     <form className="max-w-sm mt-20 flex flex-col justify-start mr-10" onSubmit={signUp}>
                         <Inputform 
                             label = "Company Name" 
-                            type = "text" 
+                            type = "text"
+                            required = "true" 
                             name = "CompanyName">
                         </Inputform>
                         <Inputform 
                             label = "E-mail" 
                             type = "email" 
+                            required = "true"
                             name = "Email">
                         </Inputform>
                         <Inputform 
                             label = "Confirm E-mail" 
                             type = "email" 
+                            required = "true"
                             name = "Confirm E-mail">
                         </Inputform>
                         <Inputform 
                             label = "Phone Number" 
                             type = "tel" 
+                            required = "true"
                             name = "Phone Number">
                         </Inputform>
                         <Inputform 
                             label = "Company Address" 
                             type = "text" 
+                            required = "true"
                             name = "Company Address">
                         </Inputform>
                         <Inputform 
                             label = "KTP Scan" 
                             type = "file" 
+                            required = "true"
                             placeholder = "Upload Image"
                             name = "KTP Scan">
                         </Inputform>
                         <Inputform 
                             label = "P.T Certification" 
                             type = "file" 
+                            required = "true"
                             placeholder = "Upload Image"
                             name = "P.T Certification">
                         </Inputform>
                         <Inputform 
                             label = "Password" 
-                            type = "password" 
+                            type = "password"
+                            required = "true" 
                             name = "Password">
                         </Inputform>
                         <Inputform 
                             label = "Confirm Password" 
-                            type = "password" 
+                            type = "password"
+                            required = "true" 
                             name = "Confirm Password">
                         </Inputform> 
                         <div className="flex flex-col justify-center items-center">

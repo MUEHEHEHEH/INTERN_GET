@@ -24,13 +24,15 @@ const VendorFormSignIn = () =>{
                             <form className="max-w-sm mx-20" onSubmit={SignIn}>
                                 <Inputform 
                                     label = "Username/Email" 
-                                    type = "email" 
+                                    type = "email"
+                                    required = "true"
                                     name = "email">
                                 </Inputform>
 
                                 <Inputform 
                                     label = "Password" 
-                                    type = "password" 
+                                    type = "password"
+                                    required = "true" 
                                     name = "password">
                                 </Inputform>
                                 

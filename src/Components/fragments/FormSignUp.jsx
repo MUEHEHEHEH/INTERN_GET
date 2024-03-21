@@ -16,55 +16,63 @@ const FormSignUp = () => {
                     <form className="max-w-sm mt-20 flex flex-col justify-start mr-10" onSubmit={signUp}>
                         <Inputform 
                             label = "Full Name" 
-                            type = "text" 
+                            type = "text"
+                            required = {true}
                             name = "FullName">
                         </Inputform>
                         <Inputform 
                             label = "E-mail" 
                             type = "email" 
+                            required = {true}
                             name = "Email">
                         </Inputform>
                         <Inputform 
                             label = "Confirm E-mail" 
                             type = "email" 
+                            required = {true}
                             name = "Confirm E-mail">
                         </Inputform>
                         <Inputform 
                             label = "Phone Number" 
                             type = "tel" 
+                            required = {true}
                             name = "Phone Number">
                         </Inputform>
                         <Inputform 
                             label = "House Address" 
                             type = "text" 
+                            required = {true}
                             name = "House Address">
                         </Inputform>
                         <Inputform 
                             label = "KTP Scan" 
                             type = "file" 
+                            required = {true}
                             placeholder = "Upload Image"
                             name = "KTP Scan">
                         </Inputform>
                         <Inputform 
                             label = "Date of Birth" 
                             type = "date" 
+                            required = {true}
                             name = "Date of Birth">
                         </Inputform>
                         <Inputform 
                             label = "Password" 
-                            type = "password" 
+                            type = "password"
+                            required = {true} 
                             name = "Password">
                         </Inputform>
                         <Inputform 
                             label = "Confirm Password" 
                             type = "password" 
+                            required = {true}
                             name = "Confirm Password">
                         </Inputform> 
                         <div className="flex flex-col justify-center items-center">
                             <Button 
                                 type="submit" 
                                 className=" text-black bg-[#FF9A9A] hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-white-300 font-bold rounded-md text-md py-2.5 text-center w-[200px]"
-                            
                             >
                                 Sign-Up
                             </Button>

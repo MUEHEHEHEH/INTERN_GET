@@ -49,6 +49,7 @@ function App() {
         path: "/VendorSignUp",
         element: <VendorSignUp/>
       },
+      
       {
         path: "/VendorDashboard",
         element: <VendorDashboard/>

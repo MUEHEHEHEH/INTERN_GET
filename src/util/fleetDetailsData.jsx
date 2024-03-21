@@ -22,7 +22,22 @@ export const dummyData = [
       ],
       price: 1000000,
       transmission : "Automatic Transmission",
+
+    
     },
+];
+
+export const appointments = [
+  {
+      id:1,
+      date: "7 March 2024",
+      time: "09.00",
+      returnDate:"8 March 2024",
+      returntime: "09.00",
+      location: "Sinar Jaya Group HQ"
+  },
+
+];
     // {
     //   id: 2,
     //   name: 'Supra',
@@ -30,7 +45,9 @@ export const dummyData = [
     //   rating: 4.7,
     //   ratingText: 'Excellent',
     //   reviewCount: '170+ reviews',
-    //   features: ['M/T', '2 Seats']
+    //   features: ['M/T', '2 Seats'],
+    //   price: 1000000,
+    //   transmission : "Automatic Transmission",
     // },
     // {
     //   id: 3,
@@ -42,4 +59,3 @@ export const dummyData = [
     //   features: ['M/T', '2 Seats']
     // },
 
-];

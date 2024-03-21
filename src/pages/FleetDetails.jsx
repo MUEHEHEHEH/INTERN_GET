@@ -6,6 +6,7 @@ import Footer from "../Components/fragments/Footer";
 import CarDetails from "../Components/fragments/CarDetails";
 import CarPrice from "../Components/fragments/CarPrice";
 import CarSpecifications from "../Components/fragments/CarSpecifications";
+import AboutCar from "../Components/fragments/AboutCar";
 
 const FleetDetails = () => {
     const handleOnClickBack = (e) => {
@@ -49,15 +50,20 @@ const FleetDetails = () => {
                             ))}
                             <div className="h-[346px] flex-col justify-start items-start gap-8 flex">
                                 <div className="h-[170px] p-9 bg-white rounded-xl border border-zinc-400 flex-col justify-center items-start gap-2.5 flex">
-                                <div className="text-stone-900 text-[25px] font-bold font-['Plus Jakarta Sans'] leading-[30px]">About Vehicle</div>
-                                <div className="flex-col justify-center items-start gap-2.5 flex">
-                                    <div className="w-[586px] text-stone-900 text-base font-medium font-['Plus Jakarta Sans'] leading-normal">Automatic Transmission</div>
-                                    <div className="w-[586px] text-stone-900 text-base font-medium font-['Plus Jakarta Sans'] leading-normal">Works Properly</div>
-                                </div>
+                                {dummyData.map((car) => (
+                                    <AboutCar 
+                                        key={car.id} 
+                                        car={car} 
+                                    />
+                                ))}
                                 </div>
                                 <div className="flex-col justify-start items-start gap-6 flex">
                                     <div className="w-[697px] px-6 py-3 bg-sky-950 rounded-lg justify-center items-center gap-2.5 inline-flex">
-                                        <Button onClick={handleOnClickNext} className="text-white text-xl font-bold font-['Plus Jakarta Sans'] leading-normal">Next</Button>
+                                        <Button 
+                                            onClick={handleOnClickNext} 
+                                            className="text-white text-xl font-bold font-['Plus Jakarta Sans'] leading-normal">
+                                            Next
+                                        </Button>
                                     </div>
                                     <Button className="w-[697px] px-6 py-3 bg-green-50 rounded-lg justify-center items-center gap-2.5 inline-flex">            
                                         <img src="/ic_baseline-whatsapp.png" alt="waLogo" />

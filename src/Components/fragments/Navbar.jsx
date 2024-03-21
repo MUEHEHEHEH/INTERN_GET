@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {Link} from "react-router-dom";
 import Button from "../elements/button/button";
 import { Fade } from "react-awesome-reveal";
-
+import { useAuth } from "../../hooks/useAuth";
 const Navbar = () =>{
     const menuItems = [
         { path: '/Home', label: 'Home' },
         { path: '/BookNow', label: 'Book Now' },
         { path: '/JoinUs', label: 'Join Us' },
         { path: '/ContactUs', label: 'Contact Us' }
-      ];
+    ];
+    const isAuthenticated = useAuth();
+    useEffect(() => {
+        console.log(isAuthenticated);
+    }, [isAuthenticated]);
+
     return(
         <nav className="top-10 left-10 w-1080 h-48 bg-transparent border-gray-200 dark:bg-gray-900">
                 {/* <Fade direction="left" triggerOnce={true} duration={2000}> */}
@@ -24,9 +29,14 @@ const Navbar = () =>{
                             <Button
                                 type="button"
                                 className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-10 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800"
-                                > <Link to = "/SignUp"> Sign Up</Link>
-                
+                            >
+                                {isAuthenticated ? (
+                                    <Link to="/SignIn">Log Out</Link>
+                                ) : (
+                                    <Link to="/SignUp">Sign Up</Link>
+                                )}
                             </Button>
+
                         </Fade>
                         </div>
                         <div className="items-center justify-between">
@@ -36,7 +46,7 @@ const Navbar = () =>{
                                     <li key={index}>
                                     <Fade direction="down" triggerOnce={true} duration={1000}>
                                         <Link to={menuItem.path} className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                                        {menuItem.label}
+                                            {menuItem.label}
                                         </Link>
                                     </Fade>
                                     </li>
