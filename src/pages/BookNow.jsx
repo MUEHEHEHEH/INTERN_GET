@@ -224,6 +224,55 @@ const BookNow = () => {
                                     </div>
                                 ))} 
                             </div>
+                            <div className="w-[791px] h-[447px] px-7 py-3.5 bg-white rounded-lg border-2 border-zinc-400 justify-start items-start gap-[15px] inline-flex">
+                            <div className="justify-start items-start gap-5 flex">
+                                <div className="w-[242px] py-2.5 flex-col justify-start items-start gap-2.5 inline-flex">
+                                <div className="flex-col justify-center items-center gap-2.5 flex">
+                                    <img className="w-[247px] h-[162px]  rotate-180" src="https://via.placeholder.com/247x162" />
+                                </div>
+                                <div className="px-4 py-3 justify-start items-center gap-2.5 inline-flex">
+                                    <img className="w-[146px] h-[66px]" src="https://via.placeholder.com/146x66" />
+                                    <div className="justify-end items-start gap-3 flex">
+                                    <div className="mt-20 px-5 py-2 bg-yellow-500 rounded-md justify-start items-center gap-2.5 flex">
+                                        <div className="text-center text-sky-950 text-[26px] font-bold font-['Plus Jakarta Sans'] leading-[35px]">4.7</div>
+                                    </div>
+                                    <div className="flex-col mt-20 justify-start items-end inline-flex">
+                                        <div className="text-center text-stone-900 text-base font-semibold font-['Plus Jakarta Sans'] leading-normal">Excellent</div>
+                                        <div className="text-center text-stone-900 text-base font-light font-['Plus Jakarta Sans'] leading-normal">170+ reviews</div>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div className="flex-col justify-end items-start gap-2.5 inline-flex">
+                                <div className="w-[312px] h-[82px] text-sky-950 text-[25px] font-bold font-['Plus Jakarta Sans'] leading-[30px]">Toyota GR86</div>
+                                <div className="flex-col justify-center items-end gap-[60px] flex">
+                                    <div className="justify-start items-start gap-2.5 inline-flex">
+                                    <div className="flex-col justify-start items-center gap-3 inline-flex">
+                                        <div className="w-[151px] h-[19px] text-zinc-500 text-base font-normal font-['Plus Jakarta Sans']">Rear Wheel Drive </div>
+                                        <div className="w-[151px] h-5 text-zinc-500 text-base font-normal font-['Plus Jakarta Sans']">Sedan</div>
+                                        <div className="w-[151px] h-5 text-zinc-500 text-base font-normal font-['Plus Jakarta Sans']">Automatic</div>
+                                    </div>
+                                    <div className="flex-col justify-start items-center gap-3 inline-flex">
+                                        <div className="w-[151px] h-[19px] text-zinc-500 text-base font-normal font-['Plus Jakarta Sans']">Turbo</div>
+                                        <div className="w-[151px] h-5 text-zinc-500 text-base font-normal font-['Plus Jakarta Sans']">Hybrid</div>
+                                        <div className="w-[151px] h-5 text-zinc-500 text-base font-normal font-['Plus Jakarta Sans']">Air Conditioning</div>
+                                    </div>
+                                    <div className="flex-col justify-center items-start gap-3 inline-flex">
+                                        <div className="w-[151px] h-[19px] text-zinc-500 text-base font-normal font-['Plus Jakarta Sans']">M-sized</div>
+                                        <div className="w-[151px] h-5 text-zinc-500 text-base font-normal font-['Plus Jakarta Sans']">Small Luggage</div>
+                                    </div>
+                                    </div>
+                                    <div className="h-[163px] flex-col justify-center items-end gap-5 flex">
+                                    <div className="text-center text-sky-950 text-base font-light font-['Plus Jakarta Sans']">Price for 1 day</div>
+                                    <div className="text-stone-900 text-4xl font-bold font-['Plus Jakarta Sans']">Rp. 1.500.000,00</div>
+                                    <div className="px-[30px] py-[15px] bg-stone-900 rounded-xl justify-center items-end gap-2.5 inline-flex">
+                                        <div className="text-white text-[21px] font-bold font-['Plus Jakarta Sans'] leading-7">View Deals</div>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
                         </div>
                     </div>
                 </div>

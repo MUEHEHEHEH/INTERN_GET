@@ -21,10 +21,26 @@ export const dummyData = [
         ["M-sized", "Small Luggage"]
       ],
       price: 1000000,
-      transmission : "Automatic Transmission",
-
+      transmission : "Automatic Transmission"
     
     },
+    // {
+    //   id: 2,
+    //   name: 'Toyota GR86',
+    //   imageUrl: '/car.png',
+    //   rating: 4.7,
+    //   ratingText: 'Excellent',
+    //   reviewCount: '170+ reviews',
+    //   features: ['M/T', '2 Seats'],
+    //   specifications: [
+    //     ["Rear Wheel Drive", "Sedan", "Automatic"],
+    //     ["Turbo", "Hybrid", "Air Conditioning"],
+    //     ["M-sized", "Small Luggage"]
+    //   ],
+    //   price: 1000000,
+    //   transmission : "Automatic Transmission"
+    
+    // },
 ];
 
 export const appointments = [

@@ -1,5 +1,9 @@
 import React from "react";
+
+//route
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
+
+//pages
 import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";

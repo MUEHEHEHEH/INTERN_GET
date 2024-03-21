@@ -1,5 +1,5 @@
 import React from "react";
-import { dummyData } from "../../util/fleetDetailsData";
+import { dummyData } from "../../util/FleetDetailsData";
 const CarSpecifications = ({car}) => {
     return(
         <>

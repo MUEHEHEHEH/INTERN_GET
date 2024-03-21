@@ -18,64 +18,63 @@ const VendorFormSignUp = () => {
                         <Inputform 
                             label = "Company Name" 
                             type = "text"
-                            required = "true" 
+                            required = {true}
                             name = "CompanyName">
                         </Inputform>
                         <Inputform 
                             label = "E-mail" 
                             type = "email" 
-                            required = "true"
+                            required = {true}
                             name = "Email">
                         </Inputform>
                         <Inputform 
                             label = "Confirm E-mail" 
                             type = "email" 
-                            required = "true"
+                            required = {true}
                             name = "Confirm E-mail">
                         </Inputform>
                         <Inputform 
                             label = "Phone Number" 
                             type = "tel" 
-                            required = "true"
+                            required = {true}
                             name = "Phone Number">
                         </Inputform>
                         <Inputform 
                             label = "Company Address" 
                             type = "text" 
-                            required = "true"
+                            required = {true}
                             name = "Company Address">
                         </Inputform>
                         <Inputform 
                             label = "KTP Scan" 
                             type = "file" 
-                            required = "true"
+                            required = {true}
                             placeholder = "Upload Image"
                             name = "KTP Scan">
                         </Inputform>
                         <Inputform 
                             label = "P.T Certification" 
                             type = "file" 
-                            required = "true"
+                            required = {true}
                             placeholder = "Upload Image"
                             name = "P.T Certification">
                         </Inputform>
                         <Inputform 
                             label = "Password" 
                             type = "password"
-                            required = "true" 
+                            required = {true}
                             name = "Password">
                         </Inputform>
                         <Inputform 
                             label = "Confirm Password" 
                             type = "password"
-                            required = "true" 
+                            required = {true}
                             name = "Confirm Password">
                         </Inputform> 
                         <div className="flex flex-col justify-center items-center">
                             <Button 
                                 type="submit" 
                                 className=" text-black bg-[#FF9A9A] hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-white-300 font-bold rounded-md text-md py-2.5 text-center w-[200px]"
-                            
                             >
                                 Sign-Up
                             </Button>

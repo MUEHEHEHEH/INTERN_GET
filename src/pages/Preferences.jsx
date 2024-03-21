@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../Components/fragments/Navbar";
 import Footer from "../Components/fragments/Footer";
 import Button from "../Components/elements/button/button";
-import { dummyData } from "../util/fleetDetailsData";
+import { dummyData } from "../util/FleetDetailsData";
 import CarPrice from "../Components/fragments/CarPrice";
 import Inputform from "../Components/elements/input/Form";
 import PickUpLocation from "../Components/fragments/PickUpLocation";

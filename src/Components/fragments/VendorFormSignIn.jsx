@@ -5,11 +5,21 @@ import Button from "../elements/button/button";
 import { Fade } from "react-awesome-reveal";
 
 const VendorFormSignIn = () =>{
+    const [formData, setFormData] = useState({
+        email: "",
+        password: ""
+    });
+
     const SignIn = (e) => {
         e.preventDefault();
-        localStorage.setItem('email', e.target.email.value);
-        localStorage.setItem('password', e.target.password.value);
-        window.location.href = "/VendorDashboard";
+        console.log("Form data:", formData);
+        localStorage.setItem("formData", JSON.stringify(formData));
+        window.location.href = "/Home";
+    };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
     };
 
     return(
@@ -25,14 +35,14 @@ const VendorFormSignIn = () =>{
                                 <Inputform 
                                     label = "Username/Email" 
                                     type = "email"
-                                    required = "true"
+                                    required = {true}
                                     name = "email">
                                 </Inputform>
 
                                 <Inputform 
                                     label = "Password" 
                                     type = "password"
-                                    required = "true" 
+                                    required = {true} 
                                     name = "password">
                                 </Inputform>
                                 
