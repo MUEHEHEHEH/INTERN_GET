@@ -10,7 +10,7 @@ import { buttons, sections } from "../util/sectionsData";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Orders from "./Orders";
-import { dummyData } from "../util/FleetDetailsData";
+import { dummyDatas } from "../util/FleetDetailsData";
 
 const BookNow2 = () => {
   //car and bike button
@@ -337,7 +337,7 @@ const BookNow2 = () => {
             </div>
             
             <div className="flex flex-col gap-4">
-              {dummyData.map((data, index) => (
+              {dummyDatas.map((data, index) => (
                 <div
                   key={index}
                   className="w-[791px] h-[447px] px-7 py-3.5 bg-white rounded-lg border-2 border-zinc-400 justify-start items-start gap-[15px] inline-flex hover:border-red-400"

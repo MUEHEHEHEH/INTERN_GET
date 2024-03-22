@@ -6,7 +6,7 @@
 //       ["M-sized", "Small Luggage"]
 // ]
 
-export const dummyData = [
+export const dummyDatas = [
   {
     id: 1,
     name: "Toyota GR86",

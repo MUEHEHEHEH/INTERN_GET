@@ -8,11 +8,11 @@ import Inputform from "../Components/elements/input/Form";
 import PickUpLocation from "../Components/fragments/PickUpLocation";
 import DropOffLocation from "../Components/fragments/DropOffLocation";
 import { useNavigate, useParams } from "react-router-dom";
-import { dummyData } from "../util/FleetDetailsData";
+import { dummyDatas } from "../util/FleetDetailsData";
 
 const Preferences = () => {
   const { id } = useParams();
-  const Dataa = dummyData[id - 1];
+  const Dataa = dummyDatas[id - 1];
   let navigate = useNavigate();
   const BackToPreviewPage = (e) => {
     e.preventDefault();

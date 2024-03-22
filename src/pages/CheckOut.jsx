@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../Components/fragments/Navbar";
 import BackGround from "../Components/layouts/BG";
 import Button from "../Components/elements/button/button";
-import { appointments, dummyData } from "../util/FleetDetailsData";
+import { appointments, dummyDatas} from "../util/FleetDetailsData";
 import CarPrice from "../Components/fragments/CarPrice";
 import Footer from "../Components/fragments/Footer";
 import Inputform from "../Components/elements/input/Form";
@@ -15,7 +15,7 @@ import { useState } from "react";
 
 const CheckOut = () => {
   const { id } = useParams();
-  const Dataa = dummyData[id - 1];
+  const Dataa = dummyDatas[id - 1];
   const Dataa2 = appointments[id - 1];
   let navigate = useNavigate();
   const handleOnClickBack = (e) => {

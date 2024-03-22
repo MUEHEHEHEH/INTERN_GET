@@ -8,7 +8,8 @@ import CarSpecifications from "../Components/fragments/CarSpecifications";
 import AboutCar from "../Components/fragments/AboutCar";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { dummyData } from "../util/FleetDetailsData";
+import { dummyDatas } from "../util/FleetDetailsData";
+
 
 const FleetDetails = () => {
   const handleOnClickBack = (e) => {
@@ -16,7 +17,7 @@ const FleetDetails = () => {
     window.location.href = "/BookNow";
   };
   const { id } = useParams();
-  const Dataa = dummyData[id - 1];
+  const Dataa = dummyDatas[id - 1];
   let navigate = useNavigate();
   const handleOnClickNext = (e) => {
     e.preventDefault();
