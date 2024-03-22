@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "../Components/fragments/Navbar";
 import Button from "../Components/elements/button/button";
-
 import Footer from "../Components/fragments/Footer";
 import CarDetails from "../Components/fragments/CarDetails";
 import CarPrice from "../Components/fragments/CarPrice";

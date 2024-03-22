@@ -6,10 +6,11 @@ import Button from "../Components/elements/button/button";
 import Inputform from "../Components/elements/input/Form";
 import { useState } from "react";
 import { buttons, sections } from "../util/sectionsData";
-import { dummyData } from "../util/FleetDetailsData";
+
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Orders from "./Orders";
+import { dummyData } from "../util/FleetDetailsData";
 
 const BookNow2 = () => {
   //car and bike button

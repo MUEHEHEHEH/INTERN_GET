@@ -6,9 +6,10 @@ import Button from "../Components/elements/button/button";
 import Inputform from "../Components/elements/input/Form";
 import { useState } from "react";
 import { buttons, sections } from "../util/sectionsData";
-import { dummyData } from "../util/FleetDetailsData";
+
 import { useNavigate} from "react-router-dom";
 import { useEffect } from "react";
+import { dummyData } from "../util/FleetDetailsData";
 
 const BookNow = () => {
   //car and bike button
@@ -89,6 +90,7 @@ const BookNow = () => {
 
   return (
     <BackGround>
+
       <div className="w-auto h-[4086px] relative bg-[#FBEBEB]">
         <div className="flex-col justify-start items-start gap-2.5 inline-flex absolute">
           <div className="justify-start items-end inline-flex">
@@ -96,13 +98,16 @@ const BookNow = () => {
             <img className="w-[738px] h-[793px] " src="/bikee.png" />
           </div>
         </div>
+
         <Navbar />
+
         <div className="w-[1017px] flex items-start justify-start pt-40 mt-20 ml-10 pl-10 ">
           <div className="w-[960px] h-[1600px] text-white text-[40px] font-extrabold font-['Plus Jakarta Sans'] absolute leading-[48px] shadow-sm">
             Simplify Travel with Our Seamless, Secure, and Reliable Car and
             Motorcycle Rentals.
           </div>
         </div>
+
         <div className="left-[52px] top-[554px] absolute flex-col justify-start items-start gap-[62px] inline-flex">
           <div className="flex-col justify-center items-center gap-20 flex">
             <div className="px-[60px] py-[30px] bg-red-500 rounded-[32px] shadow flex-col justify-center items-start gap-7 flex">
@@ -137,6 +142,7 @@ const BookNow = () => {
                   </div>
                 </div>
               </div>
+              
               <form className="flex-col justify-end items-start gap-7 flex">
                 <div className="justify-center items-center gap-20 inline-flex">
                   <div className="w-[568px] flex-col justify-start items-start gap-2 inline-flex">
@@ -228,6 +234,7 @@ const BookNow = () => {
               </form>
             </div>
           </div>
+
           <div className="flex-col justify-center items-center gap-9 flex">
             <div className="w-[1292px] justify-start items-start gap-16 inline-flex">
               <div className="justify-start items-center gap-10 flex">
@@ -254,11 +261,13 @@ const BookNow = () => {
               </div>
             </div>
           </div>
+
           <Inputform
             width="w-[1289px] h-[72px] "
             className="py-2.5 justify-start items-center gap-[18px] flex"
             placeholder="Search"
           ></Inputform>
+          
           <div className="justify-start items-start gap-12 flex">
             <img className="w-[479px] h-[184px]" src="/Rectangle_8.png" />
           </div>
