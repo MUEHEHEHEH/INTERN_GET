@@ -118,6 +118,14 @@ export const dummyDatas = [
       price: "1500000",
       image: "/car.png"
     },
+    {
+      id: 3,
+      name: "F1",
+      date: "9 March 2024",
+      description: "Toyota2",
+      price: "750000",
+      image: "/Toyota.png"
+    },
     
   ];
   

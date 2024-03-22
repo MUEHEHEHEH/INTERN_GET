@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { appointments, dummyDatas } from "../util/dummyData";
+import { Fade } from "react-awesome-reveal";
 
 const CheckOut = () => {
   const { id } = useParams();
@@ -52,23 +53,27 @@ const CheckOut = () => {
         </div>
         <div className="justify-start items-start gap-11 inline-flex pl-20 pt-10">
           <div className="w-[699px] h-[1400px] flex-col justify-start items-start gap-10 inline-flex">
-            <div className="px-8 py-4 bg-white rounded-[20px] border-2 border-zinc-400 flex-col justify-start items-start gap-7 flex">
-              <div className="text-black text-[25px] font-bold font-['Plus Jakarta Sans'] leading-[30px]">
-                Main Driver’s Details
+            <Fade direction="left" triggerOnce={true}>
+              <div className="px-8 py-4 bg-white rounded-[20px] border-2 border-zinc-400 flex-col justify-start items-start gap-7 flex">
+                <div className="text-black text-[25px] font-bold font-['Plus Jakarta Sans'] leading-[30px]">
+                  Main Driver’s Details
+                </div>
+                <DriverDetail />
               </div>
-              <DriverDetail />
-            </div>
-            <div className="px-8 py-4 bg-white rounded-[20px] border-2 border-zinc-400 flex-col justify-start items-start gap-7 flex">
-              <div className="text-black text-[25px] font-bold font-['Plus Jakarta Sans'] leading-[30px]">
-                Payment
+            </Fade>
+            <Fade direction="left" triggerOnce={true}>
+              <div className="px-8 py-4 bg-white rounded-[20px] border-2 border-zinc-400 flex-col justify-start items-start gap-7 flex">
+                <div className="text-black text-[25px] font-bold font-['Plus Jakarta Sans'] leading-[30px]">
+                  Payment
+                </div>
+                <Payment />
+                <div className="justify-center items-center gap-7 inline-flex">
+                  <div className="w-9 h-6 relative" />
+                  <div className="w-[38px] h-[29.54px] relative" />
+                  <div className="w-9 h-[11.67px] relative" />
+                </div>
               </div>
-              <Payment />
-              <div className="justify-center items-center gap-7 inline-flex">
-                <div className="w-9 h-6 relative" />
-                <div className="w-[38px] h-[29.54px] relative" />
-                <div className="w-9 h-[11.67px] relative" />
-              </div>
-            </div>
+            </Fade>
             <div className="px-8 py-4 bg-white rounded-[20px] flex-col justify-start items-start gap-7 flex">
               <div className="text-black text-[25px] font-bold font-['Plus Jakarta Sans'] leading-[30px]">
                 Terms and Conditions
@@ -125,29 +130,33 @@ const CheckOut = () => {
             </div>
           </div>
           <div className="flex-col justify-start items-start gap-11 inline-flex">
-            <div className="ml-20 h-[339px] px-[42px] py-6 bg-white rounded-2xl border-2 border-zinc-400 flex-col justify-start items-start gap-6 flex">
-              <div className="justify-center items-center gap-6 inline-flex">
-                <div className="text-black text-[26px] font-bold font-['Plus Jakarta Sans'] leading-[35px]">
-                  Pick-up and Drop off
+            <Fade direction="right" triggerOnce={true}>
+              <div className="ml-20 h-[339px] px-[42px] py-6 bg-white rounded-2xl border-2 border-zinc-400 flex-col justify-start items-start gap-6 flex">
+                <div className="justify-center items-center gap-6 inline-flex">
+                  <div className="text-black text-[26px] font-bold font-['Plus Jakarta Sans'] leading-[35px]">
+                    Pick-up and Drop off
+                  </div>
+                  <div className="w-[41px] h-[41px] relative" />
                 </div>
-                <div className="w-[41px] h-[41px] relative" />
-              </div>
-              <div className="justify-start items-start gap-[35px] inline-flex">
-                <div className="flex-col justify-center items-center gap-[18px] inline-flex">
-                  <div className="w-8 h-8 bg-red-900 rounded-full" />
-                  <div className="absolute ml-10 mb-5 w-[40px] h-[0px] origin-top-left rotate-90 border border-black"></div>
-                  <div className="w-8 h-8 mt-20 bg-rose-950 rounded-full" />
+                <div className="justify-start items-start gap-[35px] inline-flex">
+                  <div className="flex-col justify-center items-center gap-[18px] inline-flex">
+                    <div className="w-8 h-8 bg-red-900 rounded-full" />
+                    <div className="absolute ml-10 mb-5 w-[40px] h-[0px] origin-top-left rotate-90 border border-black"></div>
+                    <div className="w-8 h-8 mt-20 bg-rose-950 rounded-full" />
+                  </div>
+                  <div className="flex-col justify-start items-start gap-[58px] inline-flex">
+                    <Location appointment={Dataa2} />
+                  </div>
                 </div>
-                <div className="flex-col justify-start items-start gap-[58px] inline-flex">
-                  <Location appointment={Dataa2} />
+              </div>
+            </Fade>
+            <Fade direction="right" triggerOnce={true}>
+              <div className="w-[680px] h-[179px] flex-col justify-start items-center gap-2.5 flex">
+                <div className="h-[178px] px-[24px] py-6 bg-white rounded-2xl border-t-4 border-red-500 flex-col justify-start items-start gap-3.5 flex">
+                  <CarPrice car={Dataa} />
                 </div>
               </div>
-            </div>
-            <div className="w-[680px] h-[179px] flex-col justify-start items-center gap-2.5 flex">
-              <div className="h-[178px] px-[24px] py-6 bg-white rounded-2xl border-t-4 border-red-500 flex-col justify-start items-start gap-3.5 flex">
-                <CarPrice car={Dataa} />
-              </div>
-            </div>
+            </Fade>
           </div>
         </div>
       </div>

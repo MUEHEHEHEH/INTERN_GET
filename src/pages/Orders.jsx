@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../Components/fragments/Navbar";
 import Footer from "../Components/fragments/Footer";
 import { ordersData } from "../util/dummyData";
+import { Fade } from "react-awesome-reveal";
 
 const Orders = () => {
   return (
@@ -25,43 +26,45 @@ const Orders = () => {
                 Recent Orders
               </div>
               <div className="w-[1290px] h-[158px] justify-end items-start gap-[132px] flex-col mb-10 pr-20 gap-y-5 ">
-                {ordersData.map((order) => (
-                  <div
-                    key={order.id}
-                    className="h-[162px] bg-white rounded-2xl border border-zinc-400 justify-between items-center gap-[120px] flex mb-10"
-                  >
-                    <img
-                      className="w-[247px] h-[162px]"
-                      src={order.image}
-                      alt={order.name}
-                    />
-                    <div className="flex-col justify-center items-start gap-3 inline-flex">
-                      <div className="justify-start items-center gap-[19px] inline-flex">
-                        <div className="text-black text-[32px] font-extrabold font-['Plus Jakarta Sans'] leading-[48px]">
-                          {order.name}
+                <Fade cascade damping={0.8} triggerOnce={true}>
+                  {ordersData.map((order) => (
+                    <div
+                      key={order.id}
+                      className="h-[162px] bg-white rounded-2xl border border-zinc-400 justify-between items-center gap-[120px] flex mb-10"
+                    >
+                      <img
+                        className="w-[247px] h-[162px]"
+                        src={order.image}
+                        alt={order.name}
+                      />
+                      <div className="flex-col justify-center items-start gap-3 inline-flex">
+                        <div className="justify-start items-center gap-[19px] inline-flex">
+                          <div className="text-black text-[32px] font-extrabold font-['Plus Jakarta Sans'] leading-[48px]">
+                            {order.name}
+                          </div>
+                          <div className="text-black text-base font-medium font-['Plus Jakarta Sans'] leading-normal">
+                            {order.date}
+                          </div>
+                          <div className="text-neutral-400 text-base font-medium font-['Plus Jakarta Sans'] leading-normal">
+                            {order.description}
+                          </div>
                         </div>
-                        <div className="text-black text-base font-medium font-['Plus Jakarta Sans'] leading-normal">
-                          {order.date}
-                        </div>
-                        <div className="text-neutral-400 text-base font-medium font-['Plus Jakarta Sans'] leading-normal">
-                          {order.description}
+                      </div>
+                      <div className="h-[145px] justify-center items-center flex ">
+                        {/* <div className="w-[130px] h-[0px] origin-top-left mb-20 rotate-90 border border-zinc-500"></div> */}
+                        <hr className="border border-gray-400 w-0 h-40 mx-4" />
+                        <div className="flex-col h-full justify-center items-start text-start gap-2 inline-flex w-[250px]">
+                          <div className="w-[94px] h-[23px] text-neutral-400 text-base font-medium font-['Plus Jakarta Sans'] leading-normal">
+                            Price in total
+                          </div>
+                          <div className="text-sky-950 text-[25px] font-bold font-['Plus Jakarta Sans'] leading-[30px]">
+                            {"Rp " + order.price.toLocaleString("id-ID")}
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div className="h-[145px] justify-center items-center flex ">
-                      {/* <div className="w-[130px] h-[0px] origin-top-left mb-20 rotate-90 border border-zinc-500"></div> */}
-                      <hr className="border border-gray-400 w-0 h-40 mx-4"/>
-                      <div className="flex-col h-full justify-center items-start text-start gap-2 inline-flex w-[250px]">
-                        <div className="w-[94px] h-[23px] text-neutral-400 text-base font-medium font-['Plus Jakarta Sans'] leading-normal">
-                          Price in total
-                        </div>
-                        <div className="text-sky-950 text-[25px] font-bold font-['Plus Jakarta Sans'] leading-[30px]">
-                          {"Rp " + order.price.toLocaleString("id-ID")}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </Fade>
               </div>
             </div>
           </div>

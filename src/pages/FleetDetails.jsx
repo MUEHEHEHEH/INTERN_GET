@@ -9,7 +9,7 @@ import AboutCar from "../Components/fragments/AboutCar";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { dummyDatas } from "../util/dummyData";
-
+import { Fade } from "react-awesome-reveal";
 
 const FleetDetails = () => {
   const handleOnClickBack = (e) => {
@@ -53,11 +53,15 @@ const FleetDetails = () => {
             </div>
             <div className="h-[1509px] justify-start items-start gap-9 inline-flex">
               <div className="flex-col justify-start items-start gap-10 inline-flex">
-                <CarDetails car={Dataa} />
+                <Fade direction="left" triggerOnce={true}>
+                  <CarDetails car={Dataa} />
+                </Fade>
                 <div className="h-[346px] flex-col justify-start items-start gap-8 flex">
-                  <div className="h-[170px] p-9 bg-white rounded-xl border border-zinc-400 flex-col justify-center items-start gap-2.5 flex">
-                    <AboutCar car={Dataa} />
-                  </div>
+                  <Fade direction="left" triggerOnce={true}>
+                    <div className="h-[170px] p-9 bg-white rounded-xl border border-zinc-400 flex-col justify-center items-start gap-2.5 flex">
+                      <AboutCar car={Dataa} />
+                    </div>
+                  </Fade>
                   <div className="flex-col justify-start items-start gap-6 flex">
                     <div className="w-[697px] px-6 py-3 hover:bg-slate-500 bg-sky-950 rounded-lg justify-center items-center gap-2.5 inline-flex">
                       <Button
@@ -77,17 +81,21 @@ const FleetDetails = () => {
                 </div>
               </div>
               <div className="flex-col justify-center items-center gap-10 inline-flex">
-                <div className="flex-col justify-start items-start gap-11 flex">
-                  <div className="px-[42px] py-[21px] bg-white rounded-2xl border border-zinc-400 flex-col justify-start items-start gap-2.5 flex">
-                    <CarSpecifications car={Dataa} />
-                  </div>
-                </div>
-                <div className="w-[542px] h-[179px] flex-col justify-start items-center px-5 py-6 flex">
-                  <div className="h-[178px] px-[42px] py-6 bg-white rounded-2xl border-t-4 border-red-500 flex-col justify-start items-start gap-3.5 flex">
-                    <div>
-                      <CarPrice car={Dataa} />
+                <Fade direction="right" triggerOnce={true}>
+                  <div className="flex-col justify-start items-start gap-11 flex">
+                    <div className="px-[42px] py-[21px] bg-white rounded-2xl border border-zinc-400 flex-col justify-start items-start gap-2.5 flex">
+                      <CarSpecifications car={Dataa} />
                     </div>
                   </div>
+                </Fade>
+                <div className="w-[542px] h-[179px] flex-col justify-start items-center px-5 py-6 flex">
+                  <Fade direction="right" triggerOnce={true}>
+                    <div className="h-[178px] px-[42px] py-6 bg-white rounded-2xl border-t-4 border-red-500 flex-col justify-start items-start gap-3.5 flex">
+                      <div>
+                        <CarPrice car={Dataa} />
+                      </div>
+                    </div>
+                  </Fade>
                 </div>
               </div>
             </div>

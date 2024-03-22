@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Orders from "./Orders";
 import { dummyDatas } from "../util/dummyData";
+import { Fade } from "react-awesome-reveal";
 
 const BookNow2 = () => {
   //car and bike button
@@ -91,7 +92,6 @@ const BookNow2 = () => {
 
   return (
     <BackGround>
-
       <div className="w-auto h-[4086px] relative bg-[#FBEBEB]">
         <div className="flex-col justify-start items-start gap-2.5 inline-flex absolute">
           <div className="justify-start items-end inline-flex">
@@ -143,7 +143,6 @@ const BookNow2 = () => {
                   </div>
                 </div>
               </div>
-                        
 
               <form className="flex-col justify-end items-start gap-7 flex">
                 <div className="justify-center items-center gap-20 inline-flex">
@@ -237,25 +236,24 @@ const BookNow2 = () => {
             </div>
           </div>
 
-          
           <div className="w-[304px] h-[75.68px] justify-start items-start gap-16 inline-flex">
             <div className="w-[304px] h-[75.68px] relative">
-              <div className="w-[269px] h-[58px] pl-[42px] pr-2.5 py-2.5 left-[35px] top-[7px] absolute bg-red-100 rounded-[13px] justify-center items-center gap-2.5 inline-flex">
-                <Button
-                  onClick={NavigateToOrders}
-                  className="text-black text-[21px] font-bold font-['Plus Jakarta Sans'] leading-7"
-                >
-                  Ongoing Orders
-                </Button>
-                <div className="w-6 h-6 relative origin-top-left rotate-90" />
-              </div>
+              <Fade direction="left">
+                <div className="w-[269px] h-[58px] pl-[42px] pr-2.5 py-2.5 left-[35px] top-[7px] absolute bg-red-100 rounded-[13px] justify-center items-center gap-2.5 inline-flex">
+                  <Button
+                    onClick={NavigateToOrders}
+                    className="text-black text-[21px] font-bold font-['Plus Jakarta Sans'] leading-7"
+                  >
+                    Ongoing Orders
+                  </Button>
+                  <div className="w-6 h-6 relative origin-top-left rotate-90" />
+                </div>
+              </Fade>
               <div className="w-[75.68px] h-[75.68px] left-0 top-0 absolute bg-yellow-500 rounded-full" />
-              <div className="w-[15.62px] h-[33.64px] left-[30.03px] top-[21.62px] absolute text-black text-[32px] font-bold font-['Plus Jakarta Sans'] leading-7">
-              </div>
+              <div className="w-[15.62px] h-[33.64px] left-[30.03px] top-[21.62px] absolute text-black text-[32px] font-bold font-['Plus Jakarta Sans'] leading-7"></div>
             </div>
           </div>
-            
-          
+
           <div className="flex-col justify-center items-center gap-9 flex">
             <div className="w-[1292px] justify-start items-start gap-16 inline-flex">
               <div className="justify-start items-center gap-10 flex">
@@ -293,132 +291,138 @@ const BookNow2 = () => {
           </div>
 
           <div className="h-[1877px] pb-[52px] justify-center items-start gap-9 inline-flex">
-            <div className="h-[1877px] px-4 py-2 bg-white rounded-lg border-2 border-zinc-400 flex-col justify-start items-start gap-5 inline-flex hover:border-red-400">
-              <div className="w-[455px] justify-start items-start gap-2.5 inline-flex">
-                <div className="w-[335px] h-10 text-stone-900 text-[32px] font-extrabold font-['Plus Jakarta Sans']">
-                  Filter
+            <Fade triggerOnce={true} direction="left">
+              <div className="h-[1877px] px-4 py-2 bg-white rounded-lg border-2 border-zinc-400 flex-col justify-start items-start gap-5 inline-flex hover:border-red-400">
+                <div className="w-[455px] justify-start items-start gap-2.5 inline-flex">
+                  <div className="w-[335px] h-10 text-stone-900 text-[32px] font-extrabold font-['Plus Jakarta Sans']">
+                    Filter
+                  </div>
+                  <Button
+                    onClick={handleClearAllFilters}
+                    className="w-[110px] h-10 text-right text-stone-900 text-sm font-light font-['Plus Jakarta Sans']"
+                  >
+                    Clear all filters
+                  </Button>
                 </div>
-                <Button
-                  onClick={handleClearAllFilters}
-                  className="w-[110px] h-10 text-right text-stone-900 text-sm font-light font-['Plus Jakarta Sans']"
-                >
-                  Clear all filters
-                </Button>
+                {sections.map((section, index) => (
+                  <div
+                    key={index}
+                    className="w-[455px] flex-col justify-start items-start gap-2.5 inline-flex"
+                  >
+                    <div className="w-[455px] h-[0px] bg-stone-900 border border-black"></div>
+                    <div className="w-[198px] h-[45px] text-stone-900 text-xl font-semibold font-['Plus Jakarta Sans']">
+                      {section.title}
+                    </div>
+                    {section.options.map((option, idx) => (
+                      <div
+                        key={idx}
+                        className="justify-center items-center gap-2.5 inline-flex"
+                      >
+                        <div className="w-8 h-[30px] relative">
+                          <input
+                            type="checkbox"
+                            className="w-8 h-[30px] top-0 left-0 bg-zinc-300 rounded-lg"
+                            checked={checkboxesChecked[index][idx]}
+                            onChange={(e) =>
+                              handleCheckboxChange(e, index, idx)
+                            }
+                          />
+                        </div>
+                        <div className="text-stone-900 text-base font-normal font-['Plus Jakarta Sans']">
+                          {option}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ))}
               </div>
-              {sections.map((section, index) => (
-                <div
-                  key={index}
-                  className="w-[455px] flex-col justify-start items-start gap-2.5 inline-flex"
-                >
-                  <div className="w-[455px] h-[0px] bg-stone-900 border border-black"></div>
-                  <div className="w-[198px] h-[45px] text-stone-900 text-xl font-semibold font-['Plus Jakarta Sans']">
-                    {section.title}
-                  </div>
-                  {section.options.map((option, idx) => (
-                    <div
-                      key={idx}
-                      className="justify-center items-center gap-2.5 inline-flex"
-                    >
-                      <div className="w-8 h-[30px] relative">
-                        <input
-                          type="checkbox"
-                          className="w-8 h-[30px] top-0 left-0 bg-zinc-300 rounded-lg"
-                          checked={checkboxesChecked[index][idx]}
-                          onChange={(e) => handleCheckboxChange(e, index, idx)}
-                        />
-                      </div>
-                      <div className="text-stone-900 text-base font-normal font-['Plus Jakarta Sans']">
-                        {option}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
-            
+            </Fade>
+
             <div className="flex flex-col gap-4">
-              {dummyDatas.map((data, index) => (
-                <div
-                  key={index}
-                  className="w-[791px] h-[447px] px-7 py-3.5 bg-white rounded-lg border-2 border-zinc-400 justify-start items-start gap-[15px] inline-flex hover:border-red-400"
-                >
-                  <div className="justify-start items-start gap-5 flex">
-                    <div className="w-[242px] py-2.5 flex-col justify-start items-start gap-2.5 inline-flex">
-                      <div className="flex-col justify-center items-center gap-2.5 flex">
-                        <img
-                          className="w-[247px] h-[240px] "
-                          src={data.imageUrl}
-                          alt={data.name}
-                        />
-                      </div>
-                      <div className="px-4 py-3 justify-start items-center gap-4 inline-flex">
-                        <img
-                          className="w-[146px] h-[66px]"
-                          src="/image_4.png"
-                          alt="Placeholder"
-                        />
-                        <div className="justify-end items-start gap-3 flex">
-                          <div className="mt-20 px-5 py-2 bg-yellow-500 rounded-md justify-start items-center gap-2.5 flex">
-                            <div className="text-center text-sky-950 text-[26px] font-bold font-['Plus Jakarta Sans'] leading-[35px]">
-                              {data.rating}
+              <Fade direction="down" cascade damping={0.3} triggerOnce={true}>
+                {dummyDatas.map((data, index) => (
+                  <div
+                    key={index}
+                    className="w-[791px] h-[447px] px-7 py-3.5 bg-white rounded-lg border-2 border-zinc-400 justify-start items-start gap-[15px] inline-flex hover:border-red-400"
+                  >
+                    <div className="justify-start items-start gap-5 flex">
+                      <div className="w-[242px] py-2.5 flex-col justify-start items-start gap-2.5 inline-flex">
+                        <div className="flex-col justify-center items-center gap-2.5 flex">
+                          <img
+                            className="w-[247px] h-[240px] "
+                            src={data.imageUrl}
+                            alt={data.name}
+                          />
+                        </div>
+                        <div className="px-4 py-3 justify-start items-center gap-4 inline-flex">
+                          <img
+                            className="w-[146px] h-[66px]"
+                            src="/image_4.png"
+                            alt="Placeholder"
+                          />
+                          <div className="justify-end items-start gap-3 flex">
+                            <div className="mt-20 px-5 py-2 bg-yellow-500 rounded-md justify-start items-center gap-2.5 flex">
+                              <div className="text-center text-sky-950 text-[26px] font-bold font-['Plus Jakarta Sans'] leading-[35px]">
+                                {data.rating}
+                              </div>
                             </div>
-                          </div>
-                          <div className="flex-col mt-20 justify-start items-end inline-flex">
-                            <div className="text-center text-stone-900 text-base font-semibold font-['Plus Jakarta Sans'] leading-normal">
-                              {data.ratingText}
-                            </div>
-                            <div className="text-center text-stone-900 text-base font-light font-['Plus Jakarta Sans'] leading-normal">
-                              {data.reviewCount}
+                            <div className="flex-col mt-20 justify-start items-end inline-flex">
+                              <div className="text-center text-stone-900 text-base font-semibold font-['Plus Jakarta Sans'] leading-normal">
+                                {data.ratingText}
+                              </div>
+                              <div className="text-center text-stone-900 text-base font-light font-['Plus Jakarta Sans'] leading-normal">
+                                {data.reviewCount}
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="flex-col justify-end items-start gap-1 inline-flex">
-                      <div className="w-[312px] h-[82px] text-sky-950 text-[25px] font-bold font-['Plus Jakarta Sans'] leading-[30px] mt-5">
-                        {data.name}
-                      </div>
-                      <div className="flex-col justify-center items-end gap-[60px] flex">
-                        <div className="justify-start items-start gap-2.5 inline-flex">
-                          {data.specifications.map((specs, i) => (
-                            <div
-                              key={i}
-                              className="flex-col justify-start items-center gap-3 inline-flex"
-                            >
-                              {specs.map((spec, j) => (
-                                <div
-                                  key={j}
-                                  className="w-[151px] h-[19px] text-zinc-500 text-base font-normal font-['Plus Jakarta Sans']"
-                                >
-                                  {spec}
-                                </div>
-                              ))}
-                            </div>
-                          ))}
+                      <div className="flex-col justify-end items-start gap-1 inline-flex">
+                        <div className="w-[312px] h-[82px] text-sky-950 text-[25px] font-bold font-['Plus Jakarta Sans'] leading-[30px] mt-5">
+                          {data.name}
                         </div>
-                        <div className="h-[163px] flex-col justify-center items-end gap-5 flex">
-                          <div className="text-center text-sky-950 text-base font-light font-['Plus Jakarta Sans']">
-                            Price for 1 day
+                        <div className="flex-col justify-center items-end gap-[60px] flex">
+                          <div className="justify-start items-start gap-2.5 inline-flex">
+                            {data.specifications.map((specs, i) => (
+                              <div
+                                key={i}
+                                className="flex-col justify-start items-center gap-3 inline-flex"
+                              >
+                                {specs.map((spec, j) => (
+                                  <div
+                                    key={j}
+                                    className="w-[151px] h-[19px] text-zinc-500 text-base font-normal font-['Plus Jakarta Sans']"
+                                  >
+                                    {spec}
+                                  </div>
+                                ))}
+                              </div>
+                            ))}
                           </div>
-                          <div className="text-stone-900 text-4xl font-bold font-['Plus Jakarta Sans']">
-                            Rp. {data.price.toLocaleString("id-ID")},00
-                          </div>
-                          <div className="px-[30px] py-[15px] bg-stone-900 rounded-xl justify-center items-end gap-2.5 inline-flex hover:bg-yellow-300 hover:text-black">
-                            <Button
-                              onClick={() =>
-                                navigate(`/FleetDetails/${index + 1}`)
-                              }
-                              className="text-white text-[21px] font-bold font-['Plus Jakarta Sans'] leading-7 hover:bg-yellow-300 hover:text-black"
-                            >
-                              View Deals
-                            </Button>
+                          <div className="h-[163px] flex-col justify-center items-end gap-5 flex">
+                            <div className="text-center text-sky-950 text-base font-light font-['Plus Jakarta Sans']">
+                              Price for 1 day
+                            </div>
+                            <div className="text-stone-900 text-4xl font-bold font-['Plus Jakarta Sans']">
+                              Rp. {data.price.toLocaleString("id-ID")},00
+                            </div>
+                            <div className="px-[30px] py-[15px] bg-stone-900 rounded-xl justify-center items-end gap-2.5 inline-flex hover:bg-yellow-300 hover:text-black">
+                              <Button
+                                onClick={() =>
+                                  navigate(`/FleetDetails/${index + 1}`)
+                                }
+                                className="text-white text-[21px] font-bold font-['Plus Jakarta Sans'] leading-7 hover:bg-yellow-300 hover:text-black"
+                              >
+                                View Deals
+                              </Button>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </Fade>
             </div>
           </div>
         </div>

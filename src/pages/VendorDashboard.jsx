@@ -50,7 +50,7 @@ const VendorDashboard = () => {
             <div className="w-[508px] h-[313px] px-8 py-4 bg-white rounded-[36px] flex-col justify-start items-start gap-10 inline-flex">
               <div className="flex-col justify-start items-start gap-10 flex">
                 <div className="justify-start items-center gap-6 inline-flex">
-                  <img className="w-[146px] h-[66px]" src="/carr.png" />
+                  <img className="w-[146px] h-[66px]" src="/Toyota.png" />
                   <div className="text-black text-[26px] font-bold font-['Plus Jakarta Sans'] leading-[35px]">
                     PT. Sinar Jaya Group
                   </div>
