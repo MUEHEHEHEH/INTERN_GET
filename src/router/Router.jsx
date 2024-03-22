@@ -37,7 +37,7 @@ const router = createBrowserRouter([
     element: <VendorDashboard />,
   },
   {
-    // element: <AuthRoute />,
+    element: <AuthRoute />,
     children: [
       {
         path: "/SignIn",
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
     ],
   },
   {
-    // element: <ProtectedRoute />,
+    element: <ProtectedRoute />,
     children: [
       {
         path: "/JoinUs",

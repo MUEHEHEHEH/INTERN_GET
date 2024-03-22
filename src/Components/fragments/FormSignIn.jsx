@@ -20,8 +20,8 @@ const FormSignIn = () => {
     e.preventDefault();
     try {
       const response = await handleLogin(formData);
-      window.localStorage.setItem("token", response.token);
-     
+      window.localStorage.setItem("token", response.message);
+    //  console.log(response);
       setTimeout(() => {
         navigate("/Home");
       }, 1000);
