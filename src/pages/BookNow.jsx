@@ -96,7 +96,7 @@ const BookNow = () => {
         <div className="flex-col justify-start items-start gap-2.5 inline-flex absolute">
           <div className="justify-start items-end inline-flex">
             <img className="w-[741px] h-[793px] " src="/carr.png" />
-            <img className="w-[750px] h-[793px] " src="/bikee.png" />
+            <img className="w-[760px] h-[793px] " src="/bikee.png" />
           </div>
         </div>
 
