@@ -7,28 +7,33 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const VendorDashboard = () => {
-  const [vehicleCount, setVehicleCount] = useState(0);
-  const [brandCount, setBrandCount] = useState(0);
-  const [totalOrders, setTotalOrders] = useState(0);
-  const [newOrderCount, setNewOrderCount] = useState(0);
-  const [processedOrderCount, setProcessedOrderCount] = useState(0);
-  const [ordersThisMonthCount, setOrdersThisMonthCount] = useState(0);
-  const [averageOrderCount, setAverageOrderCount] = useState(0);
-  const [rating, setRating] = useState(0);
-  const [vendorData, setVendorData] = useState("");
-  const [reviews, setReviews] = useState(0);
+  const [dashboardData, setDashboardData] = useState({
+    vehicleCount: 0,
+    brandCount: 0,
+    totalOrders: 0,
+    newOrderCount: 0,
+    processedOrderCount: 0,
+    ordersThisMonthCount: 0,
+    averageOrderCount: 0,
+    rating: 0,
+    vendorData: "",
+    reviews: 0
+  });
 
   const updateData = () => {
-    setVehicleCount(1);
-    setBrandCount(1);
-    setTotalOrders(1);
-    setNewOrderCount(1);
-    setProcessedOrderCount(1);
-    setOrdersThisMonthCount(1);
-    setAverageOrderCount(1);
-    setRating(4.8);
-    setVendorData("Excellent");
-    setReviews(1);
+    setDashboardData({
+      ...dashboardData,
+      vehicleCount: 1,
+      brandCount: 1,
+      totalOrders: 1,
+      newOrderCount: 1,
+      processedOrderCount: 1,
+      ordersThisMonthCount: 1,
+      averageOrderCount: 1,
+      rating: 4.8,
+      vendorData: "Excellent",
+      reviews: 1
+    });
   };
 
   useEffect(() => {

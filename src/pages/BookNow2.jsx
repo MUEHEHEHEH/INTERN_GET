@@ -7,10 +7,11 @@ import Inputform from "../Components/elements/input/Form";
 import { useState } from "react";
 import { buttons, sections } from "../util/sectionsData";
 import { dummyData } from "../util/FleetDetailsData";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import Orders from "./Orders";
 
-const BookNow = () => {
+const BookNow2 = () => {
   //car and bike button
   const [clickedButtonId, setClickedButtonId] = useState(null);
   const handleClick = (buttonId) => {
@@ -27,8 +28,8 @@ const BookNow = () => {
     transmission: "",
     startDate: "",
     endDate: "",
-    startTime:"",
-    endTime:"",
+    startTime: "",
+    endTime: "",
   });
 
   const handleInputChange = (e) => {
@@ -38,11 +39,6 @@ const BookNow = () => {
       ...formData,
       pickUpLocation: newPickUpLocation || formData.pickUpLocation,
       dropOffLocation: newDropOffLocation || formData.dropOffLocation,
-      // transmission: formData.transmission,
-      // startDate: formData.startDate,
-      // endDate: formData.endDate,
-      // startTime: formData.startTime,
-      // endTime: formData.endTime,
       [e.target.name]: e.target.value,
     });
     setNewPickUpLocation("");
@@ -73,22 +69,28 @@ const BookNow = () => {
     updatedCheckboxesChecked[sectionIndex][optionIndex] = e.target.checked;
     setCheckboxesChecked(updatedCheckboxesChecked);
   };
-  
+
   useEffect(() => {
     localStorage.setItem("formData", JSON.stringify(formData));
   }, [formData]);
 
-
   useEffect(() => {
-    localStorage.setItem("checkboxesChecked", JSON.stringify(checkboxesChecked));
+    localStorage.setItem(
+      "checkboxesChecked",
+      JSON.stringify(checkboxesChecked)
+    );
   }, [checkboxesChecked]);
 
-  // const {id} = useParams();
-  // const Dataa = dummyData[id-1] ;
   let navigate = useNavigate();
+
+  const NavigateToOrders = () => {
+    // window.location.href = "/Orders"
+    navigate("/Orders");
+  };
 
   return (
     <BackGround>
+
       <div className="w-auto h-[4086px] relative bg-[#FBEBEB]">
         <div className="flex-col justify-start items-start gap-2.5 inline-flex absolute">
           <div className="justify-start items-end inline-flex">
@@ -96,13 +98,16 @@ const BookNow = () => {
             <img className="w-[738px] h-[793px] " src="/bikee.png" />
           </div>
         </div>
+
         <Navbar />
+
         <div className="w-[1017px] flex items-start justify-start pt-40 mt-20 ml-10 pl-10 ">
           <div className="w-[960px] h-[1600px] text-white text-[40px] font-extrabold font-['Plus Jakarta Sans'] absolute leading-[48px] shadow-sm">
             Simplify Travel with Our Seamless, Secure, and Reliable Car and
             Motorcycle Rentals.
           </div>
         </div>
+
         <div className="left-[52px] top-[554px] absolute flex-col justify-start items-start gap-[62px] inline-flex">
           <div className="flex-col justify-center items-center gap-20 flex">
             <div className="px-[60px] py-[30px] bg-red-500 rounded-[32px] shadow flex-col justify-center items-start gap-7 flex">
@@ -137,6 +142,8 @@ const BookNow = () => {
                   </div>
                 </div>
               </div>
+                        
+
               <form className="flex-col justify-end items-start gap-7 flex">
                 <div className="justify-center items-center gap-20 inline-flex">
                   <div className="w-[568px] flex-col justify-start items-start gap-2 inline-flex">
@@ -228,6 +235,26 @@ const BookNow = () => {
               </form>
             </div>
           </div>
+
+          
+          <div className="w-[304px] h-[75.68px] justify-start items-start gap-16 inline-flex">
+            <div className="w-[304px] h-[75.68px] relative">
+              <div className="w-[269px] h-[58px] pl-[42px] pr-2.5 py-2.5 left-[35px] top-[7px] absolute bg-red-100 rounded-[13px] justify-center items-center gap-2.5 inline-flex">
+                <Button
+                  onClick={NavigateToOrders}
+                  className="text-black text-[21px] font-bold font-['Plus Jakarta Sans'] leading-7"
+                >
+                  Ongoing Orders
+                </Button>
+                <div className="w-6 h-6 relative origin-top-left rotate-90" />
+              </div>
+              <div className="w-[75.68px] h-[75.68px] left-0 top-0 absolute bg-yellow-500 rounded-full" />
+              <div className="w-[15.62px] h-[33.64px] left-[30.03px] top-[21.62px] absolute text-black text-[32px] font-bold font-['Plus Jakarta Sans'] leading-7">
+              </div>
+            </div>
+          </div>
+            
+          
           <div className="flex-col justify-center items-center gap-9 flex">
             <div className="w-[1292px] justify-start items-start gap-16 inline-flex">
               <div className="justify-start items-center gap-10 flex">
@@ -254,6 +281,7 @@ const BookNow = () => {
               </div>
             </div>
           </div>
+
           <Inputform
             width="w-[1289px] h-[72px] "
             className="py-2.5 justify-start items-center gap-[18px] flex"
@@ -262,6 +290,7 @@ const BookNow = () => {
           <div className="justify-start items-start gap-12 flex">
             <img className="w-[479px] h-[184px]" src="/Rectangle_8.png" />
           </div>
+
           <div className="h-[1877px] pb-[52px] justify-center items-start gap-9 inline-flex">
             <div className="h-[1877px] px-4 py-2 bg-white rounded-lg border-2 border-zinc-400 flex-col justify-start items-start gap-5 inline-flex hover:border-red-400">
               <div className="w-[455px] justify-start items-start gap-2.5 inline-flex">
@@ -305,7 +334,7 @@ const BookNow = () => {
                 </div>
               ))}
             </div>
-
+            
             <div className="flex flex-col gap-4">
               {dummyData.map((data, index) => (
                 <div
@@ -398,4 +427,4 @@ const BookNow = () => {
   );
 };
 
-export default BookNow;
+export default BookNow2;

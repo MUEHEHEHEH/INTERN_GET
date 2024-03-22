@@ -35,7 +35,7 @@ const FormSignUp = () => {
       // console.log(response);
       setTimeout(() => {
         console.log(response);
-        //   navigate("/SignIn");
+          navigate("/SignIn");
       }, 1000);
       // return response;
     } catch (error) {

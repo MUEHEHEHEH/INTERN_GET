@@ -5,6 +5,7 @@ import Button from "../elements/button/button";
 import { Fade } from "react-awesome-reveal";
 import { handleLogin } from "../api/services/Auth";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const FormSignIn = () => {
   const [formData, setFormData] = useState({
@@ -12,23 +13,15 @@ const FormSignIn = () => {
     password: "",
   });
 
-  // const SignIn = (e) => {
-  //     e.preventDefault();
-  //     console.log("Form data:", formData);
-  //     localStorage.setItem("formData", JSON.stringify(formData));
-  //     window.location.href = "/Home";
-  // };
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-  const navigate = useNavigate();
+  const [token, setToken] = useState(""); 
+  const [isValidated, setIsValidated] = useState(false);
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await handleLogin(formData);
       window.localStorage.setItem("token", response.token);
+     
       setTimeout(() => {
         navigate("/Home");
       }, 1000);
@@ -36,6 +29,49 @@ const FormSignIn = () => {
       console.log(error);
     }
   };
+
+  useEffect(() => {
+    async function validateToken() {
+      console.log("masuk");
+      try {
+        const response = await axios.get("validate", {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        });
+        setIsValidated(true);
+      } catch (error) {
+        console.log(error);
+        setIsValidated(false);
+      }
+    }
+    if (token && isValidated) {
+      validateToken();
+    }
+  }, [token]);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+  const navigate = useNavigate();
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const response = await handleLogin(formData);
+  //     window.localStorage.setItem("token", response.token);
+     
+  //     setTimeout(() => {
+  //       navigate("/Home");
+  //     }, 1000);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+  // if (isValidated) {
+  //   navigate("/Home");
+  // }
 
   return (
     <div className="inline-flex items-center justify-start mx-20 mb-20 pl-10 gap-5 bg-white border border-gray-200 rounded-lg w-[1320px] h-[640px] hover:bg-gray-100 dark:border-gray-700">

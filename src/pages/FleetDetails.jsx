@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../Components/fragments/Navbar";
 import Button from "../Components/elements/button/button";
-import { dummyData } from "../util/FleetDetailsData";
+
 import Footer from "../Components/fragments/Footer";
 import CarDetails from "../Components/fragments/CarDetails";
 import CarPrice from "../Components/fragments/CarPrice";
@@ -9,6 +9,7 @@ import CarSpecifications from "../Components/fragments/CarSpecifications";
 import AboutCar from "../Components/fragments/AboutCar";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { dummyData } from "../util/FleetDetailsData";
 
 const FleetDetails = () => {
   const handleOnClickBack = (e) => {
@@ -58,7 +59,7 @@ const FleetDetails = () => {
                     <AboutCar car={Dataa} />
                   </div>
                   <div className="flex-col justify-start items-start gap-6 flex">
-                    <div className="w-[697px] px-6 py-3 bg-sky-950 rounded-lg justify-center items-center gap-2.5 inline-flex">
+                    <div className="w-[697px] px-6 py-3 hover:bg-slate-500 bg-sky-950 rounded-lg justify-center items-center gap-2.5 inline-flex">
                       <Button
                         onClick={handleOnClickNext}
                         className="text-white text-xl font-bold font-['Plus Jakarta Sans'] leading-normal"

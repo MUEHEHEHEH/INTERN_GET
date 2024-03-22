@@ -11,7 +11,7 @@ const CarDetails = ({ car }) => (
         <div className="px-4 py-3 justify-start items-center gap-2.5 flex">
           <img
             className="w-[146px] h-[66px] mr-10 pl-1"
-            src="/Logo.png"
+            src="/image_4.png"
             alt="Dummy Logo"
           />
           <div className="justify-center items-start gap-1 flex">

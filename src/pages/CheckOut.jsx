@@ -10,16 +10,24 @@ import Inputform from "../Components/elements/input/Form";
 import DriverDetail from "../Components/fragments/DriverDetails";
 import Payment from "../Components/fragments/Payment";
 import Location from "../Components/fragments/Location";
+import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 
 const CheckOut = () => {
+  const { id } = useParams();
+  const Dataa = dummyData[id - 1];
+  const Dataa2 = appointments[id - 1];
+  let navigate = useNavigate();
   const handleOnClickBack = (e) => {
     e.preventDefault();
-    window.location.href = "/Preferences";
+    navigate(`/Preferences/${id}`);
   };
-  const { id } = useParams();
-  const appointment = appointments[id - 1];
-  const Dummy = dummyData[id - 1];
+  const [isClick, setIsClick] = useState(false);
+
+  const handleNavigation = () => {
+    navigate("/BookNow2");
+  };
   return (
     <>
       <Navbar />
@@ -49,7 +57,6 @@ const CheckOut = () => {
               <div className="text-black text-[25px] font-bold font-['Plus Jakarta Sans'] leading-[30px]">
                 Main Driver’s Details
               </div>
-
               <DriverDetail />
             </div>
             <div className="px-8 py-4 bg-white rounded-[20px] border-2 border-zinc-400 flex-col justify-start items-start gap-7 flex">
@@ -73,13 +80,46 @@ const CheckOut = () => {
                 our terms of service and our vendor’s policy.
               </div>
             </div>
-            <div className="w-[697px] px-6 py-3 bg-sky-950 rounded-lg justify-center items-center gap-2.5 inline-flex">
-              <Button className="text-white text-xl font-bold font-['Plus Jakarta Sans'] leading-normal">
-                Book now!
-              </Button>
+            <div className="w-[697px] px-6 py-3 bg-sky-950 rounded-lg justify-center items-center gap-2.5 inline-flex hover:bg-slate-500">
+              {isClick ? (
+                <div className="w-screen h-screen bg-gray-700 bg-opacity-60 fixed top-0 left-0 backdrop-blur-sm">
+                  <div className="flex items-center justify-center ">
+                    <div className="flex items-start justify-center pt-20 my-20 py-20 pl-20 pr-5 ">
+                      <div className="w-[360px] h-[450px] bg-white rounded-[20px] flex-col justify-start items-center gap-20 pl-6 ml-20 mb-10 mt-10 pt-20 ">
+                        <div className="flex items-center justify-center w-[150.27px] h-[150px] bg-red-200 bg-opacity-50 rounded-full ml-20 mr-10 ">
+                          <img src="/carIcon.png" className="" alt="" />
+                        </div>
+                        <div className="mt-5 pb-5 mb-5 mr-5 text-center  text-black text-2xl font-bold font-['Plus Jakarta Sans'] leading-[28.80px]">
+                          Done, Drive Safe!
+                        </div>
+                        <div className="text-black pb-1.5 pr-7 flex items-center justify-center text-base font-normal font-['Plus Jakarta Sans'] leading-[35px]">
+                          {Dataa.name}
+                        </div>
+                        <Button
+                          className="hover:bg-yellow-400 hover:text-slate-400  w-[320px] pt-1.5 pb-1.5 bg-sky-950 rounded-xl justify-center items-center gap-5"
+                          onClick={handleNavigation}
+                        >
+                          <div className="text-white text-[21px] font-bold font-['Plus Jakarta Sans'] leading-relaxed">
+                            Continue
+                          </div>
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <Button
+                  onClick={() => setIsClick(true)}
+                  className="text-white text-xl font-bold font-['Plus Jakarta Sans'] leading-normal"
+                >
+                  Book now!
+                </Button>
+              )}
             </div>
+
             <div className="self-stretch px-6 py-3 bg-green-50 rounded-lg justify-center items-center gap-2.5 inline-flex">
               <div className="w-12 h-12 relative" />
+              <img src="/ic_baseline-whatsapp.png" alt="" />
               <div className="text-green-600 text-xl font-bold font-['Plus Jakarta Sans'] leading-normal">
                 Contact Vendor
               </div>
@@ -100,13 +140,13 @@ const CheckOut = () => {
                   <div className="w-8 h-8 mt-20 bg-rose-950 rounded-full" />
                 </div>
                 <div className="flex-col justify-start items-start gap-[58px] inline-flex">
-                  <Location appointment={appointment} />
+                  <Location appointment={Dataa2} />
                 </div>
               </div>
             </div>
             <div className="w-[680px] h-[179px] flex-col justify-start items-center gap-2.5 flex">
               <div className="h-[178px] px-[24px] py-6 bg-white rounded-2xl border-t-4 border-red-500 flex-col justify-start items-start gap-3.5 flex">
-                <CarPrice car={Dummy} />
+                <CarPrice car={Dataa} />
               </div>
             </div>
           </div>

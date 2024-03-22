@@ -87,7 +87,7 @@ export const appointments = [
     id: 2,
     date: "8 March 2024",
     time: "10.00",
-    returnDate: "11 March 2024",
+    returnDate: "9 March 2024",
     returntime: "13.00",
     location: "Sinar Jaya Group HQ",
   },
@@ -97,6 +97,14 @@ export const appointments = [
     time: "10.00",
     returnDate: "11 March 2024",
     returntime: "13.00",
+    location: "Sinar Jaya Group HQ",
+  },
+  {
+    id: 4,
+    date: "8 March 2024",
+    time: "11.00",
+    returnDate: "11 March 2024",
+    returntime: "14.00",
     location: "Sinar Jaya Group HQ",
   },
 ];

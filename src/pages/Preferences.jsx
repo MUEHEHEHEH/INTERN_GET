@@ -54,7 +54,7 @@ const Preferences = () => {
                 <DropOffLocation />
               </div>
               <div className="flex-col justify-start items-start gap-6 flex">
-                <div className="w-[697px] px-6 py-3 bg-sky-950 rounded-lg justify-center items-center gap-2.5 inline-flex">
+                <div className="hover:bg-slate-500 w-[697px] px-6 py-3 bg-sky-950 rounded-lg justify-center items-center gap-2.5 inline-flex">
                   <Button
                     onClick={handleOnClickNext}
                     className="text-white text-xl font-bold font-['Plus Jakarta Sans'] leading-normal"
