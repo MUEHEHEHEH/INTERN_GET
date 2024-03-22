@@ -8,7 +8,7 @@ import CarSpecifications from "../Components/fragments/CarSpecifications";
 import AboutCar from "../Components/fragments/AboutCar";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { dummyDatas } from "../util/FleetDetailsData";
+import { dummyDatas } from "../util/dummyData";
 
 
 const FleetDetails = () => {

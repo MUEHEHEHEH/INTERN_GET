@@ -8,7 +8,8 @@ import { useState } from "react";
 import { buttons, sections } from "../util/sectionsData";
 import { useNavigate} from "react-router-dom";
 import { useEffect } from "react";
-import { dummyDatas } from "../util/FleetDetailsData";
+import { dummyDatas } from "../util/dummyData";
+
 
 
 const BookNow = () => {

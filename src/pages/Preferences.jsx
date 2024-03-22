@@ -8,7 +8,7 @@ import Inputform from "../Components/elements/input/Form";
 import PickUpLocation from "../Components/fragments/PickUpLocation";
 import DropOffLocation from "../Components/fragments/DropOffLocation";
 import { useNavigate, useParams } from "react-router-dom";
-import { dummyDatas } from "../util/FleetDetailsData";
+import { dummyDatas } from "../util/dummyData";
 
 const Preferences = () => {
   const { id } = useParams();

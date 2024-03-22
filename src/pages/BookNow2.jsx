@@ -10,7 +10,7 @@ import { buttons, sections } from "../util/sectionsData";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Orders from "./Orders";
-import { dummyDatas } from "../util/FleetDetailsData";
+import { dummyDatas } from "../util/dummyData";
 
 const BookNow2 = () => {
   //car and bike button

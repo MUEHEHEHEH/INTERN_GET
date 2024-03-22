@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../Components/fragments/Navbar";
 import BackGround from "../Components/layouts/BG";
 import Button from "../Components/elements/button/button";
-import { appointments, dummyDatas} from "../util/FleetDetailsData";
 import CarPrice from "../Components/fragments/CarPrice";
 import Footer from "../Components/fragments/Footer";
 import Inputform from "../Components/elements/input/Form";
@@ -12,6 +11,7 @@ import Location from "../Components/fragments/Location";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
+import { appointments, dummyDatas } from "../util/dummyData";
 
 const CheckOut = () => {
   const { id } = useParams();
