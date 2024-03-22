@@ -7,16 +7,16 @@ import Footer from "../Components/fragments/Footer";
 import { Fade } from "react-awesome-reveal";
 
 const JoinUs = () => {
-    return(
-        <Fade>
-            <BackGround>
-                <Navbar/>
-                <JoinUsContent1/>
-                <JoinUsContent2/>
-                <Footer/>
-            </BackGround>
-        </Fade>
-    );
+  return (
+    <Fade>
+      <BackGround>
+        <Navbar />
+        <JoinUsContent1 />
+        <JoinUsContent2 />
+        <Footer />
+      </BackGround>
+    </Fade>
+  );
 };
 
 export default JoinUs;

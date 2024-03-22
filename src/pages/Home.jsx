@@ -8,22 +8,20 @@ import HomeContent1 from "../Components/elements/Content/Home/HomeContent1";
 import { Fade } from "react-awesome-reveal";
 
 const Home = () => {
-    return(
-        <Fade>
-            <BackGround>
-                <>
-                    <Navbar/>
-                    <HomeContent1/>
-                    <HomeContent2/>
-                    <HomeContent3/>
-                    <HomeContent4/>    
-                    <Footer/>
-                </>
-            </BackGround>
-
-        </Fade>
-        
-    );
+  return (
+    <Fade>
+      <BackGround>
+        <>
+          <Navbar />
+          <HomeContent1 />
+          <HomeContent2 />
+          <HomeContent3 />
+          <HomeContent4 />
+          <Footer />
+        </>
+      </BackGround>
+    </Fade>
+  );
 };
 
 export default Home;

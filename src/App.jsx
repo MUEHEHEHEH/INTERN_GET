@@ -1,7 +1,7 @@
 import React from "react";
 
 //route
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 //pages
 import Home from "./pages/Home";
@@ -19,67 +19,65 @@ import Preferences from "./pages/Preferences";
 import CheckOut from "./pages/CheckOut";
 
 function App() {
-
   const router = createBrowserRouter([
-      {
-        path:"/",
-        element: <Home/> 
-      },
-      {
-        path:"/Home",
-        element: <Home/> 
-      },
-      {
-        path:"/SignIn",
-        element:<SignIn/>
-      },
-      {
-        path: "/SignUp",
-        element: <SignUp/>
-      },
-      {
-        path: "/JoinUs",
-        element: <JoinUs/>
-      },
-      {
-        path: "/ContactUs",
-        element: <ContactUs/>
-      },
-      {
-        path: "/VendorSignIn",
-        element: <VendorSignIn/>
-      },
-      {
-        path: "/VendorSignUp",
-        element: <VendorSignUp/>
-      },
-      
-      {
-        path: "/VendorDashboard",
-        element: <VendorDashboard/>
-      },
-      {
-        path: "/AddFleat",
-        element: <AddFleat/>
-      },
-      {
-        path: "/BookNow",
-        element: <BookNow/>
-      },
-      {
-        path:"/FleetDetails",
-        element: <FleetDetails/>
-      },
-      {
-        path:"/Preferences",
-        element: <Preferences/>
-      },
-      {
-        path:"/CheckOut",
-        element: <CheckOut/>
-      }
-  ]); 
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/Home",
+      element: <Home />,
+    },
+    {
+      path: "/SignIn",
+      element: <SignIn />,
+    },
+    {
+      path: "/SignUp",
+      element: <SignUp />,
+    },
+    {
+      path: "/JoinUs",
+      element: <JoinUs />,
+    },
+    {
+      path: "/ContactUs",
+      element: <ContactUs />,
+    },
+    {
+      path: "/VendorSignIn",
+      element: <VendorSignIn />,
+    },
+    {
+      path: "/VendorSignUp",
+      element: <VendorSignUp />,
+    },
 
+    {
+      path: "/VendorDashboard",
+      element: <VendorDashboard />,
+    },
+    {
+      path: "/AddFleat",
+      element: <AddFleat />,
+    },
+    {
+      path: "/BookNow",
+      element: <BookNow />,
+    },
+    {
+      path: "/FleetDetails/:id",
+      element: <FleetDetails />,
+    },
+    {
+      path: "/Preferences/:id",
+      element: <Preferences />,
+    },
+    {
+      path: "/CheckOut/:id",
+      element: <CheckOut />,
+    },
+  ]);
 
   return (
     <RouterProvider router={router}></RouterProvider>
@@ -89,4 +87,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

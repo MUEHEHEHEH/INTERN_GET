@@ -4,21 +4,17 @@ import BackGround from "../Components/layouts/BG";
 import FormSignIn from "../Components/fragments/FormSignIn";
 import { Fade } from "react-awesome-reveal";
 
-
 const SignIn = () => {
-    return(
-        <Fade>
-            <BackGround>
-                <>
-                <Navbar />
-                <FormSignIn />
-                </>
-            </BackGround>
-        </Fade>
-    );
+  return (
+    <Fade>
+      <BackGround>
+        <>
+          <Navbar />
+          <FormSignIn />
+        </>
+      </BackGround>
+    </Fade>
+  );
 };
-
-
-
 
 export default SignIn;

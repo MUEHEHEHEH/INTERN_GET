@@ -7,17 +7,16 @@ import Footer from "../Components/fragments/Footer";
 import { Fade } from "react-awesome-reveal";
 
 const ContactUs = () => {
-    return(
-        <Fade>
-            <BackGround>
-                <Navbar/>
-                <ContactUsContent1/>
-                <ContactUsContent2/>
-                <Footer/>
-            </BackGround>
-
-        </Fade>
-    );
+  return (
+    <Fade>
+      <BackGround>
+        <Navbar />
+        <ContactUsContent1 />
+        <ContactUsContent2 />
+        <Footer />
+      </BackGround>
+    </Fade>
+  );
 };
 
 export default ContactUs;
