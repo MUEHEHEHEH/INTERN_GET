@@ -50,7 +50,7 @@ const VendorDashboard = () => {
             <div className="w-[508px] h-[313px] px-8 py-4 bg-white rounded-[36px] flex-col justify-start items-start gap-10 inline-flex">
               <div className="flex-col justify-start items-start gap-10 flex">
                 <div className="justify-start items-center gap-6 inline-flex">
-                  <img className="w-[146px] h-[66px]" src="" />
+                  <img className="w-[146px] h-[66px]" src="/carr.png" />
                   <div className="text-black text-[26px] font-bold font-['Plus Jakarta Sans'] leading-[35px]">
                     PT. Sinar Jaya Group
                   </div>
@@ -58,15 +58,15 @@ const VendorDashboard = () => {
                 <div className="justify-start items-start gap-3 inline-flex">
                   <div className="px-2 py-1 bg-green-600 rounded-md justify-start items-center gap-2.5 flex">
                     <div className="text-center text-white text-[26px] font-bold font-['Plus Jakarta Sans'] leading-[35px]">
-                      {rating}
+                      {dashboardData.rating}
                     </div>
                   </div>
                   <div className="flex-col justify-start items-start inline-flex">
                     <div className="text-center text-stone-900 text-base font-semibold font-['Plus Jakarta Sans'] leading-normal">
-                      {vendorData}
+                      {dashboardData.vendorData}
                     </div>
                     <div className="text-center text-stone-900 text-base font-light font-['Plus Jakarta Sans'] leading-normal">
-                      {reviews}
+                      {dashboardData.reviews}
                     </div>
                   </div>
                 </div>
@@ -74,7 +74,7 @@ const VendorDashboard = () => {
               <div className="justify-start items-start gap-20 inline-flex">
                 <div className="flex-col justify-start items-center gap-6 inline-flex">
                   <div className="text-black text-lg font-medium font-['Plus Jakarta Sans'] leading-7">
-                    {vehicleCount}
+                    {dashboardData.vehicleCount}
                   </div>
                   <div className="text-black text-[21px] font-bold font-['Plus Jakarta Sans'] leading-7">
                     Vehicles
@@ -82,7 +82,7 @@ const VendorDashboard = () => {
                 </div>
                 <div className="flex-col justify-start items-center gap-6 inline-flex">
                   <div className="text-black text-lg font-medium font-['Plus Jakarta Sans'] leading-7">
-                    {brandCount}
+                    {dashboardData.brandCount}
                   </div>
                   <div className="text-black text-[21px] font-bold font-['Plus Jakarta Sans'] leading-7">
                     Brands
@@ -90,7 +90,7 @@ const VendorDashboard = () => {
                 </div>
                 <div className="flex-col justify-start items-center gap-6 inline-flex">
                   <div className="text-black text-lg font-medium font-['Plus Jakarta Sans'] leading-7">
-                    {totalOrders}
+                    {dashboardData.totalOrders}
                   </div>
                   <div className="text-black text-[21px] font-bold font-['Plus Jakarta Sans'] leading-7">
                     Total Orders
@@ -105,7 +105,7 @@ const VendorDashboard = () => {
                     New Order
                   </div>
                   <div className="w-[108px] text-stone-900 text-[26px] font-bold font-['Plus Jakarta Sans'] leading-[35px]">
-                    {newOrderCount}
+                    {dashboardData.newOrderCount}
                   </div>
                 </div>
                 <div className="px-10 py-5 bg-white rounded-[25px] flex-col justify-start items-start gap-2.5 inline-flex">
@@ -113,7 +113,7 @@ const VendorDashboard = () => {
                     Processed Order
                   </div>
                   <div className="w-[108px] text-stone-900 text-[26px] font-bold font-['Plus Jakarta Sans'] leading-[35px]">
-                    {processedOrderCount}
+                    {dashboardData.processedOrderCount}
                   </div>
                 </div>
                 <div className="px-10 py-5 bg-white rounded-[25px] flex-col justify-start items-start gap-2.5 inline-flex">
@@ -121,7 +121,7 @@ const VendorDashboard = () => {
                     Orders this month
                   </div>
                   <div className="w-[108px] text-stone-900 text-[26px] font-bold font-['Plus Jakarta Sans'] leading-[35px]">
-                    {ordersThisMonthCount}
+                    {dashboardData.ordersThisMonthCount}
                   </div>
                 </div>
               </div>
@@ -131,7 +131,7 @@ const VendorDashboard = () => {
                     Average Order in 6 months
                   </div>
                   <div className="w-[108px] text-stone-900 text-[26px] font-bold font-['Plus Jakarta Sans'] leading-[35px]">
-                    {averageOrderCount}
+                    {dashboardData.averageOrderCount}
                   </div>
                 </div>
                 <div className="w-[157px] px-10 py-5 bg-white rounded-[25px] flex-col justify-start items-start gap-2.5 inline-flex">
@@ -139,7 +139,7 @@ const VendorDashboard = () => {
                     Rating
                   </div>
                   <div className="w-[108px] text-stone-900 text-[26px] font-bold font-['Plus Jakarta Sans'] leading-[35px]">
-                    {rating}
+                    {dashboardData.rating}
                   </div>
                 </div>
               </div>

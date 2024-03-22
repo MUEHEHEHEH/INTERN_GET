@@ -101,3 +101,23 @@ export const dummyDatas = [
     },
   ];
   
+  export const ordersData = [
+    {
+      id: 1,
+      name: "Toyota GR86",
+      date: "7 March 2024",
+      description: "GR 86 GW",
+      price: "1000000",
+      image: "/Toyota.png"
+    },
+    {
+      id: 2,
+      name: "F1",
+      date: "8 March 2024",
+      description: "F1",
+      price: "1500000",
+      image: "/car.png"
+    },
+    
+  ];
+  
