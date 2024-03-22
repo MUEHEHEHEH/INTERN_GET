@@ -15,7 +15,7 @@ const VendorFormSignIn = () => {
     e.preventDefault();
     console.log("Form data:", formData);
     localStorage.setItem("formData", JSON.stringify(formData));
-    window.location.href = "/VendorDashboard";
+    // window.location.href = "/VendorDashboard";
   };
 
   const handleChange = (e) => {
